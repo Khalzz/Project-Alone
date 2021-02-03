@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public float sensibilidadMouse = 100f; //sensibilidad basica de camara
-    public Transform cuerpoJugador; //objeto del jugador
+    public float mouseSensibility = 100f; //sensibilidad basica de camara
+    public Transform playerBody; //objeto del jugador
 
-    float rotacionX = 0f; //cantidad base de rotacion de camara
+    float rotationX = 0f; //cantidad base de rotacion de camara
 
     void Start()
     {
@@ -17,15 +17,15 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
         //input de eje x camara
-        float camaraX = Input.GetAxis("Horizontal View") * sensibilidadMouse * Time.deltaTime; 
+        float cameraX = Input.GetAxis("Horizontal View") * mouseSensibility * Time.deltaTime; 
         //input de eje y camara
-        float camaraY = Input.GetAxis("Vertical View") * sensibilidadMouse * Time.deltaTime;
+        float cameraY = Input.GetAxis("Vertical View") * mouseSensibility * Time.deltaTime;
         
-        rotacionX -= camaraY;
-        rotacionX = Mathf.Clamp(rotacionX, -90f, 90f); //rotacion maxima en eje y
+        rotationX -= cameraY;
+        rotationX = Mathf.Clamp(rotationX, -90f, 90f); //rotacion maxima en eje y
 
         //rotacion del objeto en base a "rotacionX"
-        transform.localRotation = Quaternion.Euler(rotacionX, 0f, 0f);
-        cuerpoJugador.Rotate(Vector3.up * camaraX); //rotacion de jugador en base a camara x
+        transform.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
+        playerBody.Rotate(Vector3.up * cameraX); //rotacion de jugador en base a camara x
     }
 }

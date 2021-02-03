@@ -7,39 +7,39 @@ public class PlayerRaycasting : MonoBehaviour
 {
 
     //estados de pausa
-    static public bool estadoMenuCelular = false;
+    static public bool phoneMenuState = false;
     //estados de pausa
     
     //objetos de "ui"
-    public GameObject uiPrincipal;
-    public GameObject menuCelular;
-    public TextMeshProUGUI textoInteraccion;
+    public GameObject pointOfView;
+    public GameObject phoneMenu;
+    public TextMeshProUGUI interactionText;
     //objetos de "ui"
 
     //reparacion bug textoInteraccion
-    public float tiempoInicio = 0f;
+    public float startTime = 0f;
     //reparacion bug textoInteraccion
 
-    public float distanciaParaVer;
-    public Transform objetoRadioJugador;
-    static public RaycastHit interruptor;
-    static public RaycastHit telefono;
+    public float viewDistance = 1f;
+    public Transform obectPlayerRadio;
+    static public RaycastHit switchLight;
+    static public RaycastHit cellPhone;
 
     //switch 1
-    public LayerMask switchLuz;
-    static public bool estaTocandoElSwitch;
-    static public bool tocaElInterruptor;
+    public LayerMask lightSwitch;
+    static public bool itsTouchingTheSwitch;
+    static public bool touchTheSwitch;
     
 
     //switch 2
-    public LayerMask switchLuz2;
-    static public bool estaTocandoElSwitch2;
-    static public bool tocaElInterruptor2;
+    public LayerMask lightSwitch2;
+    static public bool itsTouchingTheSwitch2;
+    static public bool touchTheSwitch2;
 
     //Celular
-    public LayerMask celular;
-    static public bool estaTocandoElCelular;
-    static public bool tocaElCelular;
+    public LayerMask phone;
+    static public bool itsTouchingThePhone;
+    static public bool touchThePhone;
 
     void Start()
     { 
@@ -47,68 +47,56 @@ public class PlayerRaycasting : MonoBehaviour
 
     void Update()
     {
-        estaTocandoElSwitch = Physics.CheckSphere(objetoRadioJugador.position, 0.8f, switchLuz);
-        estaTocandoElSwitch2 = Physics.CheckSphere(objetoRadioJugador.position, 0.8f, switchLuz2);
-        estaTocandoElCelular = Physics.CheckSphere(objetoRadioJugador.position, 1f, celular);
+        itsTouchingTheSwitch = Physics.CheckSphere(obectPlayerRadio.position, 0.8f, lightSwitch);
+        itsTouchingTheSwitch2 = Physics.CheckSphere(obectPlayerRadio.position, 0.8f, lightSwitch2);
+        itsTouchingThePhone = Physics.CheckSphere(obectPlayerRadio.position, 1f, phone);
 
-        Debug.DrawRay(this.transform.position, this.transform.forward * distanciaParaVer, Color.magenta);
+        Debug.DrawRay(this.transform.position, this.transform.forward * viewDistance, Color.magenta);
 
-        tocaElInterruptor = Physics.Raycast(this.transform.position, this.transform.forward, out interruptor, distanciaParaVer,switchLuz);  
-        tocaElInterruptor2 = Physics.Raycast(this.transform.position, this.transform.forward, out interruptor, distanciaParaVer,switchLuz2);  
-        tocaElCelular = Physics.Raycast(this.transform.position, this.transform.forward, out telefono, 2, celular);  
+        touchTheSwitch = Physics.Raycast(this.transform.position, this.transform.forward, out switchLight, viewDistance,lightSwitch);  
+        touchTheSwitch2 = Physics.Raycast(this.transform.position, this.transform.forward, out switchLight, viewDistance,lightSwitch2);  
+        touchThePhone = Physics.Raycast(this.transform.position, this.transform.forward, out cellPhone, 2, phone);  
         
         //iteractuables
-        if(tocaElCelular == true && estaTocandoElCelular == true)
+        if(touchThePhone == true && itsTouchingThePhone == true)
         {
-            textoInteraccion.color = new Color32(255,255,255,255);
-            if (Input.GetButtonDown("Action") && estadoMenuCelular == false)
+            interactionText.color = new Color32(255,255,255,255);
+            if (Input.GetButtonDown("Action") && phoneMenuState == false)
             {
                 Time.timeScale = 0f;
-                menuCelular.SetActive(true);
-                uiPrincipal.SetActive(false);
-                textoInteraccion.color = new Color32(255,255,255,0);
+                phoneMenu.SetActive(true);
+                pointOfView.SetActive(false);
+                interactionText.color = new Color32(255,255,255,0);
                 Cursor.lockState = CursorLockMode.None;
-                estadoMenuCelular = true;
+                phoneMenuState = true;
                 //menu celular activado
 
                 //abrir celular, no hace falta hacer otra cosa
                 //permitir cambiar de opinion      
             } 
         }
-        else if(tocaElInterruptor == true && estaTocandoElSwitch == true)
+        else if(touchTheSwitch == true && itsTouchingTheSwitch == true)
         {
-            textoInteraccion.color = new Color32(255,255,255,255);
+            interactionText.color = new Color32(255,255,255,255);
         }
-        else if(tocaElInterruptor2 == true && estaTocandoElSwitch2 == true)
+        else if(touchTheSwitch2 == true && itsTouchingTheSwitch2 == true)
         {
-            textoInteraccion.color = new Color32(255,255,255,255);
+            interactionText.color = new Color32(255,255,255,255);
         }
         else
         {
-            textoInteraccion.color = new Color32(255,255,255,0);
+            interactionText.color = new Color32(255,255,255,0);
         }
         //interactuables
         
         //cerrar menu celular
-        if (Input.GetButtonDown("Escape") && estadoMenuCelular == true){
+        if (Input.GetButtonDown("Escape") && phoneMenuState == true){
             Time.timeScale = 1f;
-            menuCelular.SetActive(false);
-            uiPrincipal.SetActive(true);
+            phoneMenu.SetActive(false);
+            pointOfView.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;
-            estadoMenuCelular = false;
+            phoneMenuState = false;
         }
         //cerrar menu celular
-
-        //menu de pausa
-        //.............
-        //codigo aqui
-        //.............
-        //menu de pausa
-
-        //cerrar menu de pausa
-        //....................
-        //codigo aqui
-        //....................
-        //cerrar menu de pausa
     }
 }

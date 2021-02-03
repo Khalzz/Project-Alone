@@ -4,44 +4,33 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Transform posicionPies; //objeto pies
-    Vector3 velocidad; //vector de velocidad
+    public Transform footPosition; //objeto pies
+    Vector3 velocity; //vector de velocidad
     public CharacterController controller; //llamamos el componente Character controller
-    public LayerMask Suelo; //layer que represente el suelo
+    public LayerMask floor; //layer que represente el suelo
     
     public float speed; //por defecto esta en 3 
-    public float gravedad; //variable gravedad (-9.81f base)(-39.24 recomendado)    
-    public float radioPies = 0.4f; //radio de comprobacion pies
-    bool estaEnElSuelo; //esta tocando el suelo?
+    public float gravity = -39.24f; //variable gravedad (-9.81f base)(-39.24 recomendado)    
+    public float footRadio = 0.4f; //radio de comprobacion pies
+    bool itsInTheFloor; //esta tocando el suelo?
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal"); //input horizontal (teclado y joystick)
-        float z = Input.GetAxis("Vertical"); //input vertical (teclado y joystick)
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z; // creamos el movimiento
+        Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move * speed * Time.deltaTime);	//ejecutamos el movimiento
+        controller.Move(move * speed * Time.deltaTime);
 
-            //esta tocando el suelo?
-        estaEnElSuelo = Physics.CheckSphere(posicionPies.position, radioPies, Suelo);
+        itsInTheFloor = Physics.CheckSphere(footPosition.position, footRadio, floor);
 
-        //si esta en el suelo y la velocidad es menor a 0
-        if(estaEnElSuelo && velocidad.y < 0)
+        if(itsInTheFloor && velocity.y < 0)
         {
-            //la velocidad del eje y sera -2f
-            velocidad.y = -2f;
+            velocity.y = -2f;
         }
 	
-        //ajustar valor de velocidad.y
-        velocidad.y += gravedad * Time.deltaTime;
-        //ejecutamos la "gravedad" cuando sea necesario
-        controller.Move(velocidad * Time.deltaTime);
+        velocity.y += gravity = -39.24f * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
     }
 }

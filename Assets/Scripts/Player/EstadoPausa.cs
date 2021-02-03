@@ -5,24 +5,24 @@ using UnityEngine;
 public class EstadoPausa : MonoBehaviour
 {
 
-    static public int final = 0;
+    static public int ending = 0;
     
-    static public void cambiarEstado(){
-        PlayerRaycasting.estadoMenuCelular = true;
+    static public void changeState(){
+        PlayerRaycasting.phoneMenuState = true;
     }
 
-    public void fondoPantallaCulpa(){
-        final = 1; //culpa
-        Debug.Log(final);
+    public void endingBackgroundWeigh(){
+        ending = 1;
+        Debug.Log(ending);
     }
 
-    public void fondoPantallaRemordimiento(){
-        final = 2; //remordimiento
-        Debug.Log(final);
+    public void endingBackgroundFault(){
+        ending = 2;
+        Debug.Log(ending);
     }
 
-    public void apagarPantalla(){
-        final = 3; //indiferencia
-        Debug.Log(final);
+    public void turnOffEnding(){
+        ending = 3;
+        Debug.Log(ending);
     }
 }

@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class AnimacionSwitch : MonoBehaviour
 {
-    Animation animacion;
+    Animation animation;
 
     void Start()
     {
-        animacion = this.gameObject.GetComponent<Animation>();
+        animation = this.gameObject.GetComponent<Animation>();
     }
 
     void Update()
     {
         //activar animacion de prender la luza cuando esta accion ocurre
-        if(Light.sePrendeLaLuz == true)
+        if(Light.lightTurnsOn == true)
         {
-            animacion.Play("interruptor");    
+            animation.Play("switch-1-reverse");    
         }
         //activar animacion de apagar la luz cuando esta accion ocurre
-        else if (Light.sePrendeLaLuz == false)
+        else if (Light.lightTurnsOn == false)
         {
-            animacion.Play("interruptorReversa");
+            animation.Play("switch-1");
         }
     }
 }

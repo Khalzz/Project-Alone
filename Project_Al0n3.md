@@ -120,7 +120,7 @@ El jugador llega a un pasillo largo cubierto de fotos que ahogan las paredes, fr
 
 Este sonara y al acercarte e interinar con el suenan risas, niños riendo, el juego se funde a negro, se aprecia una puerta en un fondo negro(continuara) (el juego se cierra permitiendo al jugador sentirse solo y quedarse con el silencio de su escritorio)... 
 
-> Cuidado con la obscuridad del pasaje conocido,<br>las cosas desaparecen y aparecen cuando no las vez,<br>el remordimiento atormentara al que no esperaba una pérdida <br>y la muerte esperara a quien no se espere su aparición.
+> Cuidado con la obscuridad del pasaje conocido,<br>las cosas desaparecen y aparecen cuando no las vez,<br>el remordimiento atormentara al que no esperaba una pérdida <br>y la muerte buscara a quien no se espere su aparición.
 
 ---
 

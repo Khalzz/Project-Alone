@@ -9,50 +9,44 @@ public class Light : MonoBehaviour
     public Color color2 = new Color(0,0,0); //base (off)
 
     //luz 1
-    public Material luzMaterial;
-    public GameObject luz;
-    static public bool estado;
-    static public bool sePrendeLaLuz;
-    
-    void Start()
-    {
-    }
+    public Material lightMaterial;
+    public GameObject light;
+    static public bool state;
+    static public bool lightTurnsOn;
 
     void Update()
     {
-        if(PlayerRaycasting.tocaElInterruptor == true && PlayerRaycasting.estaTocandoElSwitch == true)
+        if(PlayerRaycasting.touchTheSwitch == true && PlayerRaycasting.itsTouchingTheSwitch == true)
         {
-            //texto iteraccion true
             if (Input.GetButtonDown("Action"))
             {
-                Debug.Log("se interactuo con el switch 1");
-                if(estado == true)
+                if(state == true)
                 {
-                    sePrendeLaLuz = false;
-                    luz.SetActive(false);
-                    apagarLuz();
+                    lightTurnsOn = false;
+                    light.SetActive(false);
+                    turnOff();
+                    Debug.Log("kitchen light turns off");
                 }
-                else if (estado == false)
+                else if (state == false)
                 {
-                    sePrendeLaLuz = true;
-                    luz.SetActive(true);
-                    prenderLuz();
+                    lightTurnsOn = true;
+                    light.SetActive(true);
+                    turnOn();
+                    Debug.Log("kitchen light turns on");
                 }        
             }
         }
     }
 
-    //[funciones de luz 1]-----------------------------
-    public void apagarLuz()
+    public void turnOff()
     {
-        estado = false;
-        luzMaterial.SetColor("_EmissionColor", color2); //cambiar color de material(emission) cuando se apaga
+        state = false;
+        lightMaterial.SetColor("_EmissionColor", color2); //cambiar color de material(emission) cuando se apaga
     }
 
-    public void prenderLuz()
+    public void turnOn()
     {
-        estado = true;
-        luzMaterial.SetColor("_EmissionColor", color); //cambiar color de material(emission) cuando se prende
+        state = true;
+        lightMaterial.SetColor("_EmissionColor", color); //cambiar color de material(emission) cuando se prende
     }
-    //-------------------------------------------------
 }
