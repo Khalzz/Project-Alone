@@ -14,6 +14,11 @@ public class Light : MonoBehaviour
     static public bool state;
     static public bool lightTurnsOn;
 
+    void Start() 
+    {
+    lightMaterial.SetColor("_EmissionColor", color2);
+    }
+
     void Update()
     {
         if(PlayerRaycasting.touchTheSwitch == true && PlayerRaycasting.itsTouchingTheSwitch == true)

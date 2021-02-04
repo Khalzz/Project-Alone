@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: interruptor2Reverse
+  m_Name: switch-2-reverse
   serializedVersion: 6
   m_Legacy: 1
   m_Compressed: 0

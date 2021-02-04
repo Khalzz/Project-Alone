@@ -24,6 +24,8 @@ public class PlayerRaycasting : MonoBehaviour
     public Transform obectPlayerRadio;
     static public RaycastHit switchLight;
     static public RaycastHit cellPhone;
+    static public RaycastHit switchPostItsRc;
+
 
     //switch 1
     public LayerMask lightSwitch;
@@ -41,6 +43,11 @@ public class PlayerRaycasting : MonoBehaviour
     static public bool itsTouchingThePhone;
     static public bool touchThePhone;
 
+    //Post-it
+    public LayerMask switchPostIts;
+    static public bool itsTouchingTheSwitchPostIts;
+    static public bool touchTheSwitchPostIts;
+
     void Start()
     { 
     }
@@ -50,14 +57,21 @@ public class PlayerRaycasting : MonoBehaviour
         itsTouchingTheSwitch = Physics.CheckSphere(obectPlayerRadio.position, 0.8f, lightSwitch);
         itsTouchingTheSwitch2 = Physics.CheckSphere(obectPlayerRadio.position, 0.8f, lightSwitch2);
         itsTouchingThePhone = Physics.CheckSphere(obectPlayerRadio.position, 1f, phone);
+        itsTouchingTheSwitchPostIts = Physics.CheckSphere(obectPlayerRadio.position, 1f, switchPostIts);
 
         Debug.DrawRay(this.transform.position, this.transform.forward * viewDistance, Color.magenta);
 
         touchTheSwitch = Physics.Raycast(this.transform.position, this.transform.forward, out switchLight, viewDistance,lightSwitch);  
         touchTheSwitch2 = Physics.Raycast(this.transform.position, this.transform.forward, out switchLight, viewDistance,lightSwitch2);  
         touchThePhone = Physics.Raycast(this.transform.position, this.transform.forward, out cellPhone, 2, phone);  
+        touchTheSwitchPostIts = Physics.Raycast(this.transform.position, this.transform.forward, out switchPostItsRc, 2, switchPostIts);  
         
         //iteractuables
+        if(touchTheSwitchPostIts == true && itsTouchingTheSwitchPostIts == true)
+        {
+            Debug.Log("you are touching the switch post its");
+        }
+
         if(touchThePhone == true && itsTouchingThePhone == true)
         {
             interactionText.color = new Color32(255,255,255,255);
