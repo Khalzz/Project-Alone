@@ -21,6 +21,8 @@ En esta parte de la documentación voy a hacer énfasis de problemas técnicos t
 + Error de el maldito material que no se carga al prender la luz (este error se genera no se por que pero aveces el material no carga "específicamente el color de el emission") **Arreglado, aparentemente...**
   + esto se repara habilitando tanto el material y la luz en el editor, al iniciar el juego apagamos las luces y salimos del "juego" luego de esto desactivamos las luces y por alguna razón ahí se repara el error.
   + cabe resaltar que no se si es una forma oficial de arreglarlo pero me ha funcionado :b.
+  
+  **actualmente la solución era "iniciar el material como apagado en el script "Light.cs" en su start** así este iniciara con ese estado básico y su estado básico no se basara en como esta el material en el elemento
 ---
 
 ## Peticiones de diseño
@@ -46,6 +48,55 @@ En esta parte de la documentación voy a hacer énfasis de problemas técnicos t
   > **Como si la habitación en la que estaba se llenara de gente gritando y deseando morir**.
   >
   > Al abrir la puerta nuevamente los gritos cesan, espero no unirme a la gente tras esa puerta.
+
+---
+
++ **Post its en la cocina**
+
+  Al entrar en la cocina, se aprecian distintos post it.
+
+  + 2 al lado cercano del interruptor de luz.
+  + 1 en el refrigerador.
+  + 2 en la pared apegada al refrigerador.
+  + 7 en la pared al final del corredor de la cocina.
+
+  La función de estos debería ser representar los "actos" del protagonista como una historia ficticia la cual deberá en segundo plano ser una ilustración detallada de lo que el protagonista le hizo a una persona desconocida antes de acabar en su estado actual.
+
+  >Entre las entrañas del humo y las sombras aparecio el, dandole la mano a la niña para salvarla del barro y el mal aparente en la obscuridad de la noche.
+
+  > Entre llantos y gritos sus captores buscaban la forma de tenerla de vuelta, el hombre la atrajo a un vehiculo con el que conducio hacia su hogar.
+
+  > (en el refrigerador) lista de compra:
+>
+  > + leche
+  > + huevos
+  > + pan
+> + ~~frutas~~ (no alcanza)
+  > + ~~harina~~ (no alcanza)
+  > + **ginebra**
+  > + **cigarros**
+  >
+  > estos 2 ultimos deben estar MUY remarcados
+  
+  > Alli le presento su nueva vida, finalmente la niña nunca volveria a tener alguna necesidad.
+  
+  > Una noche la niña desperto entre sollozos y rompio en llanto sintiendose sola, el hombre, su principe vino a su rescate y con la suavidad de sus manos y el poder de un beso, logro salvarla de ese llanto incontrolable, la joven volvio a dormir mientras abrazaba la almohada como si esta no quisiera dejarla ir nunca.
+  
+  > Al despertar sintio un frio sentimiento metalico junto con un dolor agudo al rededor de sus piernas, los cortes se convinaban con frio del hielo tocando su cuerpo casi sedado.
+  
+  > Su cuerpo se sentia helado, aun que no sabia si era por el agua y hielo que la rodeaba o por el mismo sedante que lentamente apagaba el dolor que provenia de sus piernas.
+  
+  > inmediatamente empezo a sentir los cortes en sus brazos, pero lentamente este dolor se transformo en una sensacion calida.
+  
+  > Cuando el dolor se acerco a su pecho todo se volvio obscuro, no sentia su cuerpo pero aun asi se sentia muy viva.
+  
+  > Al quitarse la venda que cubria sus bellos ojos ya nadie la acompañaba, estaba sola en una bañera cubierta de hielos teñidos de rojo.
+  
+  > Pero al levantarse se veia totalmente intacta, su piel segia suave como la seda, al salir del tetrico baño vio una hermosa sala, pero bañada en una niebla tan densa al aire, como la sangre al agua.
+  
+  > La puerta principal no presentaba algun bloqueo pero ella no era capaz de abrirla, como si sus fuerzas se desvanesieran al acercarse a la misma, ella no sentia que debiera irse pues finalmente descubrio la paz que ese lugar le generaba.
+  
+  > Desde ese dia habita las salas sola, abriendo y cerrando puertas al azar, a veces puede ver al principe que la llevo ahi y recuerda esos dias de paz y compañia, deseando volver y abrazar al hombre que la hizo tan feliz.
 
 
 ---
