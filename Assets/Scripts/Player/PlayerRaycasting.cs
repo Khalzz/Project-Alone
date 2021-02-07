@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -9,6 +9,7 @@ public class PlayerRaycasting : MonoBehaviour
 
     //estados de pausa
     static public bool phoneMenuState = false;
+    static public bool pauseMenuState = false;
     //estados de pausa
     
     //objetos de "ui"
@@ -18,6 +19,9 @@ public class PlayerRaycasting : MonoBehaviour
     public GameObject closedEye;
     public TextMeshProUGUI interactionText;
     public TextMeshProUGUI cantSeeText;
+    public TextMeshProUGUI closedDoorText;
+    public TextMeshProUGUI blockedDoorText;
+    public TextMeshProUGUI openDoorText;
     //objetos de "ui"
 
     //reparacion bug textoInteraccion
@@ -56,22 +60,32 @@ public class PlayerRaycasting : MonoBehaviour
     public LayerMask switchPostIts;
     static public bool itsTouchingTheSwitchPostIts;
     static public bool touchTheSwitchPostIts;
+    public GameObject switchPostItsMenu;
+    static public bool switchPostItMenuState = false;
 
     public LayerMask fridgePostIt;
     static public bool itsTouchingTheFridgePostIt;
     static public bool touchTheFridgePostIt;
+    public GameObject fridgePostItsMenu;
+    static public bool fridgePostItMenuState = false;
 
     public LayerMask secondPostIts;
     static public bool itsTouchingTheSecondPostIts;
     static public bool touchTheSecondPostIts;
+    public GameObject secondPostItsMenu;
+    static public bool secondPostItMenuState = false;
     
     public LayerMask thirdPostIts;
     static public bool itsTouchingTheThirdPostIts;
     static public bool touchTheThirdPostIts;
+    public GameObject thirdPostItsMenu;
+    static public bool thirdPostItMenuState = false;
     
     public LayerMask lastPostIts;
     static public bool itsTouchingTheLastPostIts;
     static public bool touchTheLastPostIts;
+    public GameObject lastPostItsMenu;
+    static public bool lastPostItMenuState = false;
 
     //doors
     public LayerMask closedDoor;
@@ -89,7 +103,19 @@ public class PlayerRaycasting : MonoBehaviour
     void Start()
     { 
         eye.SetActive(false);
+        closedEye.SetActive(false);
         cantSeeText.color = new Color32(255,255,255,0);
+        closedDoorText.color = new Color32(255,255,255,0);
+        blockedDoorText.color = new Color32(255,255,255,0);
+        openDoorText.color = new Color32(255,255,255,0);
+
+        switchPostItsMenu.SetActive(false);
+        fridgePostItsMenu.SetActive(false);
+        secondPostItsMenu.SetActive(false);
+        thirdPostItsMenu.SetActive(false);
+        lastPostItsMenu.SetActive(false);
+
+        
     }
 
     void Update()
@@ -130,26 +156,47 @@ public class PlayerRaycasting : MonoBehaviour
         if(touchTheSwitchPostIts == true && itsTouchingTheSwitchPostIts == true)
         {
             verify();
-
+            if (Input.GetButtonDown("Action") && switchPostItMenuState == false)
+            {
+                openSwitch();
+            }
+            
         }
         else if (touchTheFridgePostIt == true && itsTouchingTheFridgePostIt == true) 
         {
             verify();
-
+            if (Input.GetButtonDown("Action") && fridgePostItMenuState == false)
+            {
+                openFridge();
+            }
+            
         }
         else if (touchTheSecondPostIts == true && itsTouchingTheSecondPostIts == true) 
         {
             verify();
-
+            if (Input.GetButtonDown("Action") && secondPostItMenuState == false)
+            {
+                openSecond();
+            }
+            
         }
         else if (touchTheThirdPostIts == true && itsTouchingTheThirdPostIts == true) 
         {
             verify();
-
+            if (Input.GetButtonDown("Action") && thirdPostItMenuState == false)
+            {
+                openThird();
+            }
+            
         }
         else if (touchTheLastPostIts == true && itsTouchingTheLastPostIts == true) 
         {
             verify();
+            if (Input.GetButtonDown("Action") && lastPostItMenuState == false)
+            {
+                openLast();
+            }
+            
         }
         else
         {
@@ -161,18 +208,27 @@ public class PlayerRaycasting : MonoBehaviour
 
         if (touchTheClosedDoor == true && itsTouchingTheClosedDoor == true) 
         {
-            Debug.Log("the door is closed");
+            closedDoorText.color = new Color32(255,255,255,255);
+            blockedDoorText.color = new Color32(255,255,255,0);
+            openDoorText.color = new Color32(255,255,255,0);
         }
         else if (touchTheBlockedDoor == true && itsTouchingTheBlockedDoor == true) 
         {
-            Debug.Log("the door is blocked");
+            closedDoorText.color = new Color32(255,255,255,0);
+            blockedDoorText.color = new Color32(255,255,255,255);
+            openDoorText.color = new Color32(255,255,255,0); 
         }
         else if (touchTheOpenDoor == true && itsTouchingTheOpenDoor == true) 
         {
-            Debug.Log("The door is open");
+            closedDoorText.color = new Color32(255,255,255,0);
+            blockedDoorText.color = new Color32(255,255,255,0);
+            openDoorText.color = new Color32(255,255,255,255); 
         }
         else
         {
+            closedDoorText.color = new Color32(255,255,255,0);
+            blockedDoorText.color = new Color32(255,255,255,0);
+            openDoorText.color = new Color32(255,255,255,0); 
         } 
 
         if(touchThePhone == true && itsTouchingThePhone == true)
@@ -217,21 +273,153 @@ public class PlayerRaycasting : MonoBehaviour
         //cerrar menu celular
     }
 
+    void openSwitch() 
+    {
+        Time.timeScale = 0f;
+        switchPostItsMenu.SetActive(true);
+        pointOfView.SetActive(false);
+        eye.SetActive(false);
+
+        cantSeeText.color = new Color32(255,255,255,0);
+        closedDoorText.color = new Color32(255,255,255,0);
+        blockedDoorText.color = new Color32(255,255,255,0);
+        openDoorText.color = new Color32(255,255,255,0); 
+
+        Cursor.lockState = CursorLockMode.None;
+        switchPostItMenuState = true;
+        pauseMenuState = true;
+    }
+
+    void openFridge() 
+    {
+        Time.timeScale = 0f;
+        fridgePostItsMenu.SetActive(true);
+        pointOfView.SetActive(false);
+        eye.SetActive(false);
+
+        cantSeeText.color = new Color32(255,255,255,0);
+        closedDoorText.color = new Color32(255,255,255,0);
+        blockedDoorText.color = new Color32(255,255,255,0);
+        openDoorText.color = new Color32(255,255,255,0); 
+
+        Cursor.lockState = CursorLockMode.None;
+        switchPostItMenuState = true;
+        pauseMenuState = true;
+    }
+
+    void openSecond() 
+    {
+        Time.timeScale = 0f;
+        secondPostItsMenu.SetActive(true);
+        pointOfView.SetActive(false);
+        eye.SetActive(false);
+
+        cantSeeText.color = new Color32(255,255,255,0);
+        closedDoorText.color = new Color32(255,255,255,0);
+        blockedDoorText.color = new Color32(255,255,255,0);
+        openDoorText.color = new Color32(255,255,255,0); 
+
+        Cursor.lockState = CursorLockMode.None;
+        secondPostItMenuState = true;
+        pauseMenuState = true;
+    }
+    
+    void openThird() 
+    {
+        Time.timeScale = 0f;
+        thirdPostItsMenu.SetActive(true);
+        pointOfView.SetActive(false);
+        eye.SetActive(false);
+
+        cantSeeText.color = new Color32(255,255,255,0);
+        closedDoorText.color = new Color32(255,255,255,0);
+        blockedDoorText.color = new Color32(255,255,255,0);
+        openDoorText.color = new Color32(255,255,255,0); 
+
+        Cursor.lockState = CursorLockMode.None;
+        thirdPostItMenuState = true;
+        pauseMenuState = true;
+    }
+    
+    void openLast() 
+    {
+        Time.timeScale = 0f;
+        lastPostItsMenu.SetActive(true);
+        pointOfView.SetActive(false);
+        eye.SetActive(false);
+
+        cantSeeText.color = new Color32(255,255,255,0);
+        closedDoorText.color = new Color32(255,255,255,0);
+        blockedDoorText.color = new Color32(255,255,255,0);
+        openDoorText.color = new Color32(255,255,255,0); 
+
+        Cursor.lockState = CursorLockMode.None;
+        lastPostItMenuState = true;
+        pauseMenuState = true;
+    }
+
+    void menuExit() 
+    {
+        Time.timeScale = 1f;
+        phoneMenu.SetActive(false);
+        switchPostItsMenu.SetActive(false);
+        fridgePostItsMenu.SetActive(false);
+        secondPostItsMenu.SetActive(false);
+        thirdPostItsMenu.SetActive(false);
+        lastPostItsMenu.SetActive(false);
+        pointOfView.SetActive(true); 
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     void verify() 
     {
         if (Light.state == true) 
+        {
+            cantSeeText.color = new Color32(255,255,255,0);
+            eye.SetActive(true);
+            closedEye.SetActive(false);
+            pointOfView.SetActive(false);
+            if (Input.GetButtonDown("Action") && switchPostItMenuState == false)
             {
-                cantSeeText.color = new Color32(255,255,255,0);
-                eye.SetActive(true);
-                closedEye.SetActive(false);
-                pointOfView.SetActive(false);
+                openSwitch();
             }
-            else if (Light.state == false) 
+            if (Input.GetButtonDown("Action") && fridgePostItMenuState == false)
             {
-                cantSeeText.color = new Color32(255,255,255,255);
-                eye.SetActive(false);
-                closedEye.SetActive(true);
-                pointOfView.SetActive(false);
+                openFridge();
             }
+            if (Input.GetButtonDown("Action") && secondPostItMenuState == false)
+            {
+                openSecond();
+            }
+            if (Input.GetButtonDown("Action") && thirdPostItMenuState == false)
+            {
+                openThird();
+            }
+            if (Input.GetButtonDown("Action") && lastPostItMenuState == false)
+            {
+                openLast();
+            }
+            if (Input.GetButtonDown("Escape") && pauseMenuState == true)
+            {
+                menuExit();
+            }
+        }
+        else if (Light.state == false) 
+        {
+            cantSeeText.color = new Color32(255,255,255,255);
+            eye.SetActive(false);
+            closedEye.SetActive(true);
+            pointOfView.SetActive(false);
+        }
+        
+        if (pauseMenuState == true) 
+        {
+            eye.SetActive(false);
+            closedEye.SetActive(false);
+            cantSeeText.color = new Color32(255,255,255,0);
+            closedDoorText.color = new Color32(255,255,255,0);
+            blockedDoorText.color = new Color32(255,255,255,0);
+            openDoorText.color = new Color32(255,255,255,0); 
+        }
     }
 }
