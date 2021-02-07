@@ -33,12 +33,14 @@ public class PlayerRaycasting : MonoBehaviour
     static public RaycastHit secondPostItsRc;
     static public RaycastHit thirdPostItsRc;
     static public RaycastHit lastPostItsRc;
+    static public RaycastHit closedDoorRc;
+    static public RaycastHit blockedDoorRc;
+    static public RaycastHit openDoorRc;
 
     //switch 1
     public LayerMask lightSwitch;
     static public bool itsTouchingTheSwitch;
     static public bool touchTheSwitch;
-    
 
     //switch 2
     public LayerMask lightSwitch2;
@@ -71,6 +73,19 @@ public class PlayerRaycasting : MonoBehaviour
     static public bool itsTouchingTheLastPostIts;
     static public bool touchTheLastPostIts;
 
+    //doors
+    public LayerMask closedDoor;
+    static public bool itsTouchingTheClosedDoor;
+    static public bool touchTheClosedDoor;
+
+    public LayerMask blockedDoor;
+    static public bool itsTouchingTheBlockedDoor;
+    static public bool touchTheBlockedDoor;
+
+    public LayerMask openDoor;
+    static public bool itsTouchingTheOpenDoor;
+    static public bool touchTheOpenDoor;
+
     void Start()
     { 
         eye.SetActive(false);
@@ -79,25 +94,37 @@ public class PlayerRaycasting : MonoBehaviour
 
     void Update()
     {
+        Debug.DrawRay(this.transform.position, this.transform.forward * viewDistance, Color.magenta);
+
         itsTouchingTheSwitch = Physics.CheckSphere(obectPlayerRadio.position, 0.8f, lightSwitch);
         itsTouchingTheSwitch2 = Physics.CheckSphere(obectPlayerRadio.position, 0.8f, lightSwitch2);
+
         itsTouchingThePhone = Physics.CheckSphere(obectPlayerRadio.position, 1f, phone);
+
         itsTouchingTheSwitchPostIts = Physics.CheckSphere(obectPlayerRadio.position, 1f, switchPostIts);
         itsTouchingTheFridgePostIt = Physics.CheckSphere(obectPlayerRadio.position, 1f, fridgePostIt);
         itsTouchingTheSecondPostIts = Physics.CheckSphere(obectPlayerRadio.position, 1f, secondPostIts);
         itsTouchingTheThirdPostIts = Physics.CheckSphere(obectPlayerRadio.position, 1f, thirdPostIts);
         itsTouchingTheLastPostIts = Physics.CheckSphere(obectPlayerRadio.position, 1f, lastPostIts);
 
-        Debug.DrawRay(this.transform.position, this.transform.forward * viewDistance, Color.magenta);
+        itsTouchingTheClosedDoor = Physics.CheckSphere(obectPlayerRadio.position, 1f, closedDoor);
+        itsTouchingTheBlockedDoor = Physics.CheckSphere(obectPlayerRadio.position, 1f, blockedDoor);
+        itsTouchingTheOpenDoor = Physics.CheckSphere(obectPlayerRadio.position, 1f, openDoor);
 
         touchTheSwitch = Physics.Raycast(this.transform.position, this.transform.forward, out switchLight, viewDistance,lightSwitch);  
         touchTheSwitch2 = Physics.Raycast(this.transform.position, this.transform.forward, out switchLight, viewDistance,lightSwitch2);  
+
         touchThePhone = Physics.Raycast(this.transform.position, this.transform.forward, out cellPhone, 2, phone);  
+
         touchTheSwitchPostIts = Physics.Raycast(this.transform.position, this.transform.forward, out switchPostItsRc, 2, switchPostIts);  
         touchTheFridgePostIt = Physics.Raycast(this.transform.position, this.transform.forward, out fridgePostItRc, 2, fridgePostIt);  
         touchTheSecondPostIts = Physics.Raycast(this.transform.position, this.transform.forward, out secondPostItsRc, 2, secondPostIts);  
         touchTheThirdPostIts = Physics.Raycast(this.transform.position, this.transform.forward, out thirdPostItsRc, 2, thirdPostIts);  
         touchTheLastPostIts = Physics.Raycast(this.transform.position, this.transform.forward, out lastPostItsRc, 2, lastPostIts);  
+
+        touchTheClosedDoor = Physics.Raycast(this.transform.position, this.transform.forward, out closedDoorRc, 2, closedDoor);  
+        touchTheBlockedDoor = Physics.Raycast(this.transform.position, this.transform.forward, out blockedDoorRc, 2, blockedDoor);  
+        touchTheOpenDoor = Physics.Raycast(this.transform.position, this.transform.forward, out openDoorRc, 2, openDoor);  
         
         //iteractuables
         if(touchTheSwitchPostIts == true && itsTouchingTheSwitchPostIts == true)
@@ -131,6 +158,22 @@ public class PlayerRaycasting : MonoBehaviour
             pointOfView.SetActive(true);
             cantSeeText.color = new Color32(255,255,255,0);
         }
+
+        if (touchTheClosedDoor == true && itsTouchingTheClosedDoor == true) 
+        {
+            Debug.Log("the door is closed");
+        }
+        else if (touchTheBlockedDoor == true && itsTouchingTheBlockedDoor == true) 
+        {
+            Debug.Log("the door is blocked");
+        }
+        else if (touchTheOpenDoor == true && itsTouchingTheOpenDoor == true) 
+        {
+            Debug.Log("The door is open");
+        }
+        else
+        {
+        } 
 
         if(touchThePhone == true && itsTouchingThePhone == true)
         {
