@@ -5,6 +5,7 @@ using TMPro;
 
 public class PlayerRaycasting : MonoBehaviour
 {
+    static public bool lightState;
 
     //estados de pausa
     static public bool phoneMenuState = false;
@@ -13,7 +14,10 @@ public class PlayerRaycasting : MonoBehaviour
     //objetos de "ui"
     public GameObject pointOfView;
     public GameObject phoneMenu;
+    public GameObject eye;
+    public GameObject closedEye;
     public TextMeshProUGUI interactionText;
+    public TextMeshProUGUI cantSeeText;
     //objetos de "ui"
 
     //reparacion bug textoInteraccion
@@ -25,7 +29,10 @@ public class PlayerRaycasting : MonoBehaviour
     static public RaycastHit switchLight;
     static public RaycastHit cellPhone;
     static public RaycastHit switchPostItsRc;
-
+    static public RaycastHit fridgePostItRc;
+    static public RaycastHit secondPostItsRc;
+    static public RaycastHit thirdPostItsRc;
+    static public RaycastHit lastPostItsRc;
 
     //switch 1
     public LayerMask lightSwitch;
@@ -48,8 +55,26 @@ public class PlayerRaycasting : MonoBehaviour
     static public bool itsTouchingTheSwitchPostIts;
     static public bool touchTheSwitchPostIts;
 
+    public LayerMask fridgePostIt;
+    static public bool itsTouchingTheFridgePostIt;
+    static public bool touchTheFridgePostIt;
+
+    public LayerMask secondPostIts;
+    static public bool itsTouchingTheSecondPostIts;
+    static public bool touchTheSecondPostIts;
+    
+    public LayerMask thirdPostIts;
+    static public bool itsTouchingTheThirdPostIts;
+    static public bool touchTheThirdPostIts;
+    
+    public LayerMask lastPostIts;
+    static public bool itsTouchingTheLastPostIts;
+    static public bool touchTheLastPostIts;
+
     void Start()
     { 
+        eye.SetActive(false);
+        cantSeeText.color = new Color32(255,255,255,0);
     }
 
     void Update()
@@ -58,6 +83,10 @@ public class PlayerRaycasting : MonoBehaviour
         itsTouchingTheSwitch2 = Physics.CheckSphere(obectPlayerRadio.position, 0.8f, lightSwitch2);
         itsTouchingThePhone = Physics.CheckSphere(obectPlayerRadio.position, 1f, phone);
         itsTouchingTheSwitchPostIts = Physics.CheckSphere(obectPlayerRadio.position, 1f, switchPostIts);
+        itsTouchingTheFridgePostIt = Physics.CheckSphere(obectPlayerRadio.position, 1f, fridgePostIt);
+        itsTouchingTheSecondPostIts = Physics.CheckSphere(obectPlayerRadio.position, 1f, secondPostIts);
+        itsTouchingTheThirdPostIts = Physics.CheckSphere(obectPlayerRadio.position, 1f, thirdPostIts);
+        itsTouchingTheLastPostIts = Physics.CheckSphere(obectPlayerRadio.position, 1f, lastPostIts);
 
         Debug.DrawRay(this.transform.position, this.transform.forward * viewDistance, Color.magenta);
 
@@ -65,11 +94,42 @@ public class PlayerRaycasting : MonoBehaviour
         touchTheSwitch2 = Physics.Raycast(this.transform.position, this.transform.forward, out switchLight, viewDistance,lightSwitch2);  
         touchThePhone = Physics.Raycast(this.transform.position, this.transform.forward, out cellPhone, 2, phone);  
         touchTheSwitchPostIts = Physics.Raycast(this.transform.position, this.transform.forward, out switchPostItsRc, 2, switchPostIts);  
+        touchTheFridgePostIt = Physics.Raycast(this.transform.position, this.transform.forward, out fridgePostItRc, 2, fridgePostIt);  
+        touchTheSecondPostIts = Physics.Raycast(this.transform.position, this.transform.forward, out secondPostItsRc, 2, secondPostIts);  
+        touchTheThirdPostIts = Physics.Raycast(this.transform.position, this.transform.forward, out thirdPostItsRc, 2, thirdPostIts);  
+        touchTheLastPostIts = Physics.Raycast(this.transform.position, this.transform.forward, out lastPostItsRc, 2, lastPostIts);  
         
         //iteractuables
         if(touchTheSwitchPostIts == true && itsTouchingTheSwitchPostIts == true)
         {
-            Debug.Log("you are touching the switch post its");
+            verify();
+
+        }
+        else if (touchTheFridgePostIt == true && itsTouchingTheFridgePostIt == true) 
+        {
+            verify();
+
+        }
+        else if (touchTheSecondPostIts == true && itsTouchingTheSecondPostIts == true) 
+        {
+            verify();
+
+        }
+        else if (touchTheThirdPostIts == true && itsTouchingTheThirdPostIts == true) 
+        {
+            verify();
+
+        }
+        else if (touchTheLastPostIts == true && itsTouchingTheLastPostIts == true) 
+        {
+            verify();
+        }
+        else
+        {
+            eye.SetActive(false);
+            closedEye.SetActive(false);
+            pointOfView.SetActive(true);
+            cantSeeText.color = new Color32(255,255,255,0);
         }
 
         if(touchThePhone == true && itsTouchingThePhone == true)
@@ -112,5 +172,23 @@ public class PlayerRaycasting : MonoBehaviour
             phoneMenuState = false;
         }
         //cerrar menu celular
+    }
+
+    void verify() 
+    {
+        if (Light.state == true) 
+            {
+                cantSeeText.color = new Color32(255,255,255,0);
+                eye.SetActive(true);
+                closedEye.SetActive(false);
+                pointOfView.SetActive(false);
+            }
+            else if (Light.state == false) 
+            {
+                cantSeeText.color = new Color32(255,255,255,255);
+                eye.SetActive(false);
+                closedEye.SetActive(true);
+                pointOfView.SetActive(false);
+            }
     }
 }

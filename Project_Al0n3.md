@@ -77,25 +77,25 @@ En esta parte de la documentación voy a hacer énfasis de problemas técnicos t
   > + **cigarros**
   >
   > estos 2 ultimos deben estar MUY remarcados
-  
+
   > Alli le presento su nueva vida, finalmente la niña nunca volveria a tener alguna necesidad.
-  
+
   > Una noche la niña desperto entre sollozos y rompio en llanto sintiendose sola, el hombre, su principe vino a su rescate y con la suavidad de sus manos y el poder de un beso, logro salvarla de ese llanto incontrolable, la joven volvio a dormir mientras abrazaba la almohada como si esta no quisiera dejarla ir nunca.
-  
+
   > Al despertar sintio un frio sentimiento metalico junto con un dolor agudo al rededor de sus piernas, los cortes se convinaban con frio del hielo tocando su cuerpo casi sedado.
-  
+
   > Su cuerpo se sentia helado, aun que no sabia si era por el agua y hielo que la rodeaba o por el mismo sedante que lentamente apagaba el dolor que provenia de sus piernas.
-  
+
   > inmediatamente empezo a sentir los cortes en sus brazos, pero lentamente este dolor se transformo en una sensacion calida.
-  
+
   > Cuando el dolor se acerco a su pecho todo se volvio obscuro, no sentia su cuerpo pero aun asi se sentia muy viva.
-  
+
   > Al quitarse la venda que cubria sus bellos ojos ya nadie la acompañaba, estaba sola en una bañera cubierta de hielos teñidos de rojo.
-  
+
   > Pero al levantarse se veia totalmente intacta, su piel segia suave como la seda, al salir del tetrico baño vio una hermosa sala, pero bañada en una niebla tan densa al aire, como la sangre al agua.
-  
+
   > La puerta principal no presentaba algun bloqueo pero ella no era capaz de abrirla, como si sus fuerzas se desvanesieran al acercarse a la misma, ella no sentia que debiera irse pues finalmente descubrio la paz que ese lugar le generaba.
-  
+
   > Desde ese dia habita las salas sola, abriendo y cerrando puertas al azar, a veces puede ver al principe que la llevo ahi y recuerda esos dias de paz y compañia, deseando volver y abrazar al hombre que la hizo tan feliz.
 
 
