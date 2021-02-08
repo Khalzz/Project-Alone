@@ -152,60 +152,7 @@ public class PlayerRaycasting : MonoBehaviour
         touchTheBlockedDoor = Physics.Raycast(this.transform.position, this.transform.forward, out blockedDoorRc, 2, blockedDoor);  
         touchTheOpenDoor = Physics.Raycast(this.transform.position, this.transform.forward, out openDoorRc, 2, openDoor);  
         
-        //iteractuables
-        if(touchTheSwitchPostIts == true && itsTouchingTheSwitchPostIts == true)
-        {
-            verify();
-            if (Input.GetButtonDown("Action") && switchPostItMenuState == false)
-            {
-                openSwitch();
-            }
-            
-        }
-        else if (touchTheFridgePostIt == true && itsTouchingTheFridgePostIt == true) 
-        {
-            verify();
-            if (Input.GetButtonDown("Action") && fridgePostItMenuState == false)
-            {
-                openFridge();
-            }
-            
-        }
-        else if (touchTheSecondPostIts == true && itsTouchingTheSecondPostIts == true) 
-        {
-            verify();
-            if (Input.GetButtonDown("Action") && secondPostItMenuState == false)
-            {
-                openSecond();
-            }
-            
-        }
-        else if (touchTheThirdPostIts == true && itsTouchingTheThirdPostIts == true) 
-        {
-            verify();
-            if (Input.GetButtonDown("Action") && thirdPostItMenuState == false)
-            {
-                openThird();
-            }
-            
-        }
-        else if (touchTheLastPostIts == true && itsTouchingTheLastPostIts == true) 
-        {
-            verify();
-            if (Input.GetButtonDown("Action") && lastPostItMenuState == false)
-            {
-                openLast();
-            }
-            
-        }
-        else
-        {
-            eye.SetActive(false);
-            closedEye.SetActive(false);
-            pointOfView.SetActive(true);
-            cantSeeText.color = new Color32(255,255,255,0);
-        }
-
+        //doors logic
         if (touchTheClosedDoor == true && itsTouchingTheClosedDoor == true) 
         {
             closedDoorText.color = new Color32(255,255,255,255);
@@ -231,6 +178,56 @@ public class PlayerRaycasting : MonoBehaviour
             openDoorText.color = new Color32(255,255,255,0); 
         } 
 
+        //post-it's logic
+        if(touchTheSwitchPostIts == true && itsTouchingTheSwitchPostIts == true)
+        {
+            verify();
+            if (Input.GetButtonDown("Action") && switchPostItMenuState == false && Light.state == true)
+            {
+                openSwitch();
+            }         
+        }
+        else if (touchTheFridgePostIt == true && itsTouchingTheFridgePostIt == true) 
+        {
+            verify();
+            if (Input.GetButtonDown("Action") && fridgePostItMenuState == false && Light.state == true)
+            {
+                openFridge();
+            }            
+        }
+        else if (touchTheSecondPostIts == true && itsTouchingTheSecondPostIts == true) 
+        {
+            verify();
+            if (Input.GetButtonDown("Action") && secondPostItMenuState == false && Light.state == true)
+            {
+                openSecond();
+            }
+        }
+        else if (touchTheThirdPostIts == true && itsTouchingTheThirdPostIts == true) 
+        {
+            verify();
+            if (Input.GetButtonDown("Action") && thirdPostItMenuState == false && Light.state == true)
+            {
+                openThird();
+            }
+        }
+        else if (touchTheLastPostIts == true && itsTouchingTheLastPostIts == true) 
+        {
+            verify();
+            if (Input.GetButtonDown("Action") && lastPostItMenuState == false && Light.state == true)
+            {
+                openLast();
+            }
+        }
+        else
+        {
+            eye.SetActive(false);
+            closedEye.SetActive(false);
+            pointOfView.SetActive(true);
+            cantSeeText.color = new Color32(255,255,255,0);
+        }
+
+        //phone logic
         if(touchThePhone == true && itsTouchingThePhone == true)
         {
             interactionText.color = new Color32(255,255,255,255);
@@ -241,11 +238,7 @@ public class PlayerRaycasting : MonoBehaviour
                 pointOfView.SetActive(false);
                 interactionText.color = new Color32(255,255,255,0);
                 Cursor.lockState = CursorLockMode.None;
-                phoneMenuState = true;
-                //menu celular activado
-
-                //abrir celular, no hace falta hacer otra cosa
-                //permitir cambiar de opinion      
+                phoneMenuState = true;     
             } 
         }
         else if(touchTheSwitch == true && itsTouchingTheSwitch == true)
@@ -260,9 +253,7 @@ public class PlayerRaycasting : MonoBehaviour
         {
             interactionText.color = new Color32(255,255,255,0);
         }
-        //interactuables
         
-        //cerrar menu celular
         if (Input.GetButtonDown("Escape") && phoneMenuState == true){
             Time.timeScale = 1f;
             phoneMenu.SetActive(false);
@@ -277,6 +268,10 @@ public class PlayerRaycasting : MonoBehaviour
     {
         Time.timeScale = 0f;
         switchPostItsMenu.SetActive(true);
+        fridgePostItsMenu.SetActive(false);
+        secondPostItsMenu.SetActive(false);
+        thirdPostItsMenu.SetActive(false);
+        lastPostItsMenu.SetActive(false);
         pointOfView.SetActive(false);
         eye.SetActive(false);
 
@@ -293,7 +288,11 @@ public class PlayerRaycasting : MonoBehaviour
     void openFridge() 
     {
         Time.timeScale = 0f;
+        switchPostItsMenu.SetActive(false);
         fridgePostItsMenu.SetActive(true);
+        secondPostItsMenu.SetActive(false);
+        thirdPostItsMenu.SetActive(false);
+        lastPostItsMenu.SetActive(false);
         pointOfView.SetActive(false);
         eye.SetActive(false);
 
@@ -310,7 +309,11 @@ public class PlayerRaycasting : MonoBehaviour
     void openSecond() 
     {
         Time.timeScale = 0f;
+        switchPostItsMenu.SetActive(false);
+        fridgePostItsMenu.SetActive(false);
         secondPostItsMenu.SetActive(true);
+        thirdPostItsMenu.SetActive(false);
+        lastPostItsMenu.SetActive(false);
         pointOfView.SetActive(false);
         eye.SetActive(false);
 
@@ -327,7 +330,11 @@ public class PlayerRaycasting : MonoBehaviour
     void openThird() 
     {
         Time.timeScale = 0f;
+        switchPostItsMenu.SetActive(false);
+        fridgePostItsMenu.SetActive(false);
+        secondPostItsMenu.SetActive(false);
         thirdPostItsMenu.SetActive(true);
+        lastPostItsMenu.SetActive(false);
         pointOfView.SetActive(false);
         eye.SetActive(false);
 
@@ -344,6 +351,10 @@ public class PlayerRaycasting : MonoBehaviour
     void openLast() 
     {
         Time.timeScale = 0f;
+        switchPostItsMenu.SetActive(false);
+        fridgePostItsMenu.SetActive(false);
+        secondPostItsMenu.SetActive(false);
+        thirdPostItsMenu.SetActive(false);
         lastPostItsMenu.SetActive(true);
         pointOfView.SetActive(false);
         eye.SetActive(false);
@@ -358,17 +369,49 @@ public class PlayerRaycasting : MonoBehaviour
         pauseMenuState = true;
     }
 
-    void menuExit() 
+    void switchExit() 
     {
         Time.timeScale = 1f;
-        phoneMenu.SetActive(false);
         switchPostItsMenu.SetActive(false);
+        pointOfView.SetActive(true); 
+        Cursor.lockState = CursorLockMode.Locked;
+        verify();
+    }
+
+    void fridgeExit() 
+    {
+        Time.timeScale = 1f;
         fridgePostItsMenu.SetActive(false);
+        pointOfView.SetActive(true); 
+        Cursor.lockState = CursorLockMode.Locked;
+        verify();
+    }
+
+    void secondExit() 
+    {
+        Time.timeScale = 1f;
         secondPostItsMenu.SetActive(false);
+        pointOfView.SetActive(true); 
+        Cursor.lockState = CursorLockMode.Locked;
+        verify();
+    }
+
+    void thirdExit() 
+    {
+        Time.timeScale = 1f;
         thirdPostItsMenu.SetActive(false);
+        pointOfView.SetActive(true); 
+        Cursor.lockState = CursorLockMode.Locked;
+        verify();
+    }
+    
+    void lastExit() 
+    {
+        Time.timeScale = 1f;
         lastPostItsMenu.SetActive(false);
         pointOfView.SetActive(true); 
         Cursor.lockState = CursorLockMode.Locked;
+        verify();
     }
 
     void verify() 
@@ -379,29 +422,25 @@ public class PlayerRaycasting : MonoBehaviour
             eye.SetActive(true);
             closedEye.SetActive(false);
             pointOfView.SetActive(false);
-            if (Input.GetButtonDown("Action") && switchPostItMenuState == false)
+            if (Input.GetButtonDown("Escape") && switchPostItMenuState == true)
             {
-                openSwitch();
+                switchExit();
             }
-            if (Input.GetButtonDown("Action") && fridgePostItMenuState == false)
+            if (Input.GetButtonDown("Escape") && fridgePostItMenuState == true)
             {
-                openFridge();
+                fridgeExit();
             }
-            if (Input.GetButtonDown("Action") && secondPostItMenuState == false)
+            if (Input.GetButtonDown("Escape") && secondPostItMenuState == true)
             {
-                openSecond();
+                secondExit();
             }
-            if (Input.GetButtonDown("Action") && thirdPostItMenuState == false)
+            if (Input.GetButtonDown("Escape") && thirdPostItMenuState == true)
             {
-                openThird();
+                thirdExit();
             }
-            if (Input.GetButtonDown("Action") && lastPostItMenuState == false)
+            if (Input.GetButtonDown("Escape") && lastPostItMenuState == true)
             {
-                openLast();
-            }
-            if (Input.GetButtonDown("Escape") && pauseMenuState == true)
-            {
-                menuExit();
+                lastExit();
             }
         }
         else if (Light.state == false) 
