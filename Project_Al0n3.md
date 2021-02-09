@@ -5,10 +5,11 @@ Project_Al0n3 es un juego de terror psicológico, la idea detrás de este es man
 ## Cosas a tomar en cuenta
 
 + El juego toma el suicidio del personaje principal como punto detonante.
-+ Esto lleva a un estado del protagonista de "sueño pre-mortem".
-+ Una de las ideas principales es solo despertar en el living de la casa del protagonista sin saber nada.
++ El protagonista despierta sin saber que es, donde esta ni quien es.
++ Una de las ideas principales es que el desarrollo del personaje se mantenga en el jugador en base a experiencias representadas en los sueños que el protagonista tiene al irse a dormir.
 + ***El protagonista no habla a cámara, todo lo que sabemos o la mayoría debe venir de texto y ruidos exteriores.***
-+ El camino del protagonista debe terminar apagando la televisión representando este el cese de su vida.
++ El camino del protagonista debe terminar un dia cualquiera a las 3 de la mañana, a esa hora se debera hacer una coneccion entre el "mundo espiritual (donde se encuentra el personaje)" y el mundo real.
++ Esto permite ver al jugador las puertas abiertas (con papel policial) el baño abierto con sangre en la bañera y mas importante aun con un cuerpo dentro de una bolsa negra y en la pared tras el sofa un monton gigantesco de sangre como si alguien la hubiera tirado en la pared con odio, o con pena...
 + Lo que parece una despedida tierna y hasta poética, se transforma en el purgatorio, un lugar obscuro sin alma alguna pero algo te ve y no sabes que.
 + En la cercanía entre un tipo de niebla extraña se distinguen caras siniestras y risas constantes (Idea en proceso).
 
@@ -26,6 +27,8 @@ En esta parte de la documentación voy a hacer énfasis de problemas técnicos t
 ---
 
 ## Peticiones de diseño
+
+> Cuidado con la obscuridad del pasaje conocido,<br>las cosas desaparecen y aparecen cuando no las vez,<br>el remordimiento atormentara al que no esperaba una pérdida <br>y la muerte buscara a quien no se espere su aparición.
 
 + en la pared "específicamente en la que añadiré la pintura del payaso" al iniciarse el acto 2 dependiendo del final (finales malos: esta se llena de imágenes con una cara sonriendo con fondo negro y en esta animada caras reales pero en partes pequeñas que cambian muy rápido, a excepción que en este caso serán muchísimas) (finales buenos: en este se puede observar una fuerte luz proveniente de la puerta principal de la casa, la imagen de payaso se ve en una pared, y al acercarte se apaga la luz, todo esta en negro y las caras cambian a la misma vara tenebrosa con animación en todas partes, se van añadiendo de a poco y luego al estar todo lleno con un crescendo de violín el juego se cierra.)
 
@@ -98,21 +101,6 @@ En esta parte de la documentación voy a hacer énfasis de problemas técnicos t
 
   > Desde ese dia habita las salas sola, abriendo y cerrando puertas al azar, a veces puede ver al principe que la llevo ahi y recuerda esos dias de paz y compañia, deseando volver y abrazar al hombre que la hizo tan feliz.
 
-
----
-
-## Orden cronológico
-
-1. El protagonista despierta en el sillón de la sala.
-2. El protagonista escucha algo caer desde el baño al final de un pasillo (interactuar con esta no hace nada aun ).
-3. Ves entre el living y la cocina descubres la llave para entrar a la habitación.
-4. Ideal ir mostrando constantemente mensajes que demuestren la destrucción interna del protagonista, que representen que este necesitaba ayuda y alguien se la intentaba dar.
-5. Al entrar a la habitación se ven mas cosas de investigar y el pasillo se extiende, se hace mas obscuro y cuesta mas ver el final del mismo
-6. Al mismo tiempo alguien grita del baño "Déjenme salir!!!! Ayuda por favor!!! Me arrepiento, Quiero salir, Quiero llegar al final.!!!" mientras deliberadamente intenta abrir la cerradura con llave, esta no se abre y los sonidos se hacen mas fuertes mientras vas llegando a la sala principal.
-7. El final cambia según las decisiones del jugador.
-11. El juego se cierra.
-    + Dato técnico (al cerrarse se crea una variable que se guarde al cerrar el juego, esta debe hacer que la pantalla principal cambie por una mas "rara"
-
 ---
 
 ## Planificación
@@ -135,15 +123,27 @@ El baño, la salida, una habitación y la cocina son las únicas puertas que se 
 
   ---
 
-+ La habitación parece ser accesible, pero sientes como si alguien la bloqueara desde el otro lado.
++ La habitación puedes abrirla facilmente y en su interior ves tu habitacion, una cama grande, un mueble con una lampara que genera una luz tenue y un escritorio con un computador cerrado/apagado.
 
   ---
 
 + La cocina esta abierta, tu única limitación de entrar a ella es que esta cubierta de una obscuridad que te ahoga en miedo el verla, de hecho no podrías decir que es una cocina sin prender la luz.
 
   La cocina aun con la luz prendida se ve obscura, el jugador al entrar en ella ve varias cosas de interés, desde post-its en tanto el refrigerador como en una pared en su lado obscuro como variedad de platos sucios entre otras cosas (al acercarte a el post-it en la parte obscura suena un violín de aspecto terrorífico en un crescendo que termina en una forma fría pero haciendo una transformación drástica hacia una música que sale del refrigerador)
+  
+  ---
+
+La cama es un objeto con el que puedes interactuar, y al acercarte a la cama tu personaje se acuesta en ella y duerme, al hacerlo todo se pone en negro y.
 
 ---
+
+# Project_Al0n3 acto 2
+
+**coming soon**
+
+---
+
+# posible
 
 **En la mesa del living hay un celular, al interactuar con el hay 3 opciones:**
 
@@ -151,17 +151,9 @@ El baño, la salida, una habitación y la cocina son las únicas puertas que se 
 2. dejar de imagen de bloqueo un screenshot de una nota que pide perdón [final 2](#Final-2)
 3. dejar de imagen de bloqueo una imagen normal [final 3](#Final-3)
 
-tras elegir esto el celular se apaga, suena una música y se abre la puerta de la habitación del personaje principal
-
 Tras esto empezara a sonar la puerta principal muy fuerte, alguien toca y no sabemos por que "abre la puerta" "por favor" "se que estas ahí" "heeeeee-...!!!!" el grito se corta a la mitad al entrar en la habitación principal (esta se abre al revisar el celular).
 
 Al entrar se aprecia una cama, un mueble con una lampara a demás de un escritorio con un computador cerrado, aun así la luz tenue de la lampara genera el sentimiento de vació.
-
- El computador esta bloqueado y obviamente no conoces la contraseña.
-
-La cama es un objeto con el que puedes interactuar, y al acercarte a la cama tu personaje se acuesta en ella y duerme, al hacerlo todo se pone en negro y ves a tu personaje caer y todo se va a obscuro mientras tu caída se expande cada vez mas.
-
----
 
 ## Final 1 (Pesar)
 
@@ -196,9 +188,3 @@ Al entrar en la puerta esta se cierra y lentamente aparece la misma imagen const
 ## Final 3 (Indiferencia)
 
 El personaje llega a un pasillo obscuro donde  lo único que aprecia es la puerta abriéndose, el fondo es obscuro y vació, apenas denotas algún tipo de objeto al fondo, al entrar se prende una luz al final de un túnel muy lejano, al llegar todo termina como en el final de "**Culpa**".
-
----
-
-# Project_Al0n3 acto 2
-
-**coming soon**

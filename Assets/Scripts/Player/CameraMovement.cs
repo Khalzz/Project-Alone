@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public float mouseSensibility = 100f; //sensibilidad basica de camara
+    public static float mouseSensibility = 100f; //sensibilidad basica de camara
     public Transform playerBody; //objeto del jugador
 
     float rotationX = 0f; //cantidad base de rotacion de camara

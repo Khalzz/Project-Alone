@@ -41,6 +41,7 @@ public class PlayerRaycasting : MonoBehaviour
     static public RaycastHit closedDoorRc;
     static public RaycastHit blockedDoorRc;
     static public RaycastHit openDoorRc;
+    static public RaycastHit bedRc;
 
     //switch 1
     public LayerMask lightSwitch;
@@ -104,8 +105,14 @@ public class PlayerRaycasting : MonoBehaviour
     static public bool theDoorIsOpen;
     static public int doorState;
 
+    public LayerMask bed;
+    static public bool itsTouchingTheBed;
+    static public bool touchTheBed;
+    static public bool sleeping;
+
     void Start()
     { 
+        sleeping = false;
         doorState = 0;
         theDoorIsOpen = false;
         eye.SetActive(false);
@@ -143,6 +150,8 @@ public class PlayerRaycasting : MonoBehaviour
         itsTouchingTheBlockedDoor = Physics.CheckSphere(obectPlayerRadio.position, 1f, blockedDoor);
         itsTouchingTheOpenDoor = Physics.CheckSphere(obectPlayerRadio.position, 1f, openDoor);
 
+        itsTouchingTheBed = Physics.CheckSphere(obectPlayerRadio.position, 1f, bed);
+
         touchTheSwitch = Physics.Raycast(this.transform.position, this.transform.forward, out switchLight, viewDistance,lightSwitch);  
         touchTheSwitch2 = Physics.Raycast(this.transform.position, this.transform.forward, out switchLight, viewDistance,lightSwitch2);  
 
@@ -156,9 +165,14 @@ public class PlayerRaycasting : MonoBehaviour
 
         touchTheClosedDoor = Physics.Raycast(this.transform.position, this.transform.forward, out closedDoorRc, 2, closedDoor);  
         touchTheBlockedDoor = Physics.Raycast(this.transform.position, this.transform.forward, out blockedDoorRc, 2, blockedDoor);  
-        touchTheOpenDoor = Physics.Raycast(this.transform.position, this.transform.forward, out openDoorRc, 2, openDoor);  
+        touchTheOpenDoor = Physics.Raycast(this.transform.position, this.transform.forward, out openDoorRc, 2, openDoor); 
+
+        touchTheBed = Physics.Raycast(this.transform.position, this.transform.forward, out bedRc, 2, bed);  
         
         //iteractuables
+        
+        
+
          if (touchTheClosedDoor == true && itsTouchingTheClosedDoor == true) 
         {
             closedDoorText.color = new Color32(255,255,255,255);
@@ -260,6 +274,16 @@ public class PlayerRaycasting : MonoBehaviour
         else
         {
             isTurnedOff.color = new Color32(255,255,255,0);
+        }
+
+         if (touchTheBed == true && itsTouchingTheBed == true)
+        {
+            interact.color = new Color32(255,255,255,255);
+            if (Input.GetButtonDown("Action"))
+            {
+                sleeping = true;
+            }
+            
         }
         //interactuables
     }
