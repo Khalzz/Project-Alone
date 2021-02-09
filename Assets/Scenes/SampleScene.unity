@@ -5321,6 +5321,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: b430dbaf83ad0dec084ab22256ca3923, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: b430dbaf83ad0dec084ab22256ca3923, type: 2}
+  - {fileID: 7400000, guid: 2206aa4af7a81dfbeaf0c8ba9c73bbe1, type: 2}
   m_WrapMode: 1
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -11002,7 +11003,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh67928
+  m_Name: pb_Mesh119284
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

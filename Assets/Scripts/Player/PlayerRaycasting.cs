@@ -101,10 +101,13 @@ public class PlayerRaycasting : MonoBehaviour
     static public bool itsTouchingTheOpenDoor;
     static public bool touchTheOpenDoor;
     static public bool theDoorIsClosed;
+    static public bool theDoorIsOpen;
+    static public int doorState;
 
     void Start()
     { 
-        theDoorIsClosed = true;
+        doorState = 0;
+        theDoorIsOpen = false;
         eye.SetActive(false);
         closedEye.SetActive(false);
         cantSeeText.color = new Color32(255,255,255,0);
@@ -156,6 +159,39 @@ public class PlayerRaycasting : MonoBehaviour
         touchTheOpenDoor = Physics.Raycast(this.transform.position, this.transform.forward, out openDoorRc, 2, openDoor);  
         
         //iteractuables
+         if (touchTheClosedDoor == true && itsTouchingTheClosedDoor == true) 
+        {
+            closedDoorText.color = new Color32(255,255,255,255);
+            blockedDoorText.color = new Color32(255,255,255,0);
+            interact.color = new Color32(255,255,255,0);
+        }
+        else if (touchTheBlockedDoor == true && itsTouchingTheBlockedDoor == true) 
+        {
+            closedDoorText.color = new Color32(255,255,255,0);
+            blockedDoorText.color = new Color32(255,255,255,255);
+            interact.color = new Color32(255,255,255,0); 
+        }
+        else if (touchTheOpenDoor == true && itsTouchingTheOpenDoor == true) 
+        {
+            closedDoorText.color = new Color32(255,255,255,0);
+            blockedDoorText.color = new Color32(255,255,255,0);
+            interact.color = new Color32(255,255,255,255);
+            if (Input.GetButtonDown("Action") && theDoorIsOpen == false)
+            {
+                doorState = 1; //open the door
+            }
+            if (Input.GetButtonDown("Action") && theDoorIsOpen == true)
+            {
+                doorState = 2; //close the door
+            }
+        }
+        else
+        {
+            closedDoorText.color = new Color32(255,255,255,0);
+            blockedDoorText.color = new Color32(255,255,255,0);
+            interact.color = new Color32(255,255,255,0); 
+        } 
+
         if(touchTheSwitchPostIts == true && itsTouchingTheSwitchPostIts == true)
         {
             verify();
@@ -208,35 +244,6 @@ public class PlayerRaycasting : MonoBehaviour
             pointOfView.SetActive(true);
             cantSeeText.color = new Color32(255,255,255,0);
         }
-
-        if (touchTheClosedDoor == true && itsTouchingTheClosedDoor == true) 
-        {
-            closedDoorText.color = new Color32(255,255,255,255);
-            blockedDoorText.color = new Color32(255,255,255,0);
-            interact.color = new Color32(255,255,255,0);
-        }
-        else if (touchTheBlockedDoor == true && itsTouchingTheBlockedDoor == true) 
-        {
-            closedDoorText.color = new Color32(255,255,255,0);
-            blockedDoorText.color = new Color32(255,255,255,255);
-            interact.color = new Color32(255,255,255,0); 
-        }
-        else if (touchTheOpenDoor == true && itsTouchingTheOpenDoor == true) 
-        {
-            closedDoorText.color = new Color32(255,255,255,0);
-            blockedDoorText.color = new Color32(255,255,255,0);
-            interact.color = new Color32(255,255,255,255);
-            if (Input.GetButtonDown("Action") && theDoorIsClosed == true)
-            {
-                theDoorIsClosed = false;
-            }
-        }
-        else
-        {
-            closedDoorText.color = new Color32(255,255,255,0);
-            blockedDoorText.color = new Color32(255,255,255,0);
-            interact.color = new Color32(255,255,255,0); 
-        } 
 
         if(touchThePhone == true && itsTouchingThePhone == true)
         {
