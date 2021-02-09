@@ -9,26 +9,13 @@ public class AnimacionPuertaHabitacion : MonoBehaviour
 
     void Start()
     {
-        animation = this.gameObject.GetComponent<Animation>();
+        animation = this.gameObject.GetComponent<Animation>(); 
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        //la puerta se abre al seleccionar que hacer con el telefono
-        if(EstadoPausa.ending == 1)
+        if (PlayerRaycasting.theDoorIsClosed == false)
         {
-            Debug.Log("la puerta se abrio (final culpa)");
-            animation.Play("abrirPuerta");
-        }
-        else if(EstadoPausa.ending == 2)
-        {
-            Debug.Log("la puerta se abrio (final remordimiento)");
-            animation.Play("abrirPuerta");
-        }
-        else if(EstadoPausa.ending == 3)
-        {
-            Debug.Log("la puerta se abrio (final indiferencia)");
             animation.Play("abrirPuerta");
         }
     }
