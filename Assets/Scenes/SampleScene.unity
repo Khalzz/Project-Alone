@@ -4071,7 +4071,7 @@ GameObject:
   - component: {fileID: 390563435}
   - component: {fileID: 390563434}
   m_Layer: 5
-  m_Name: The door is open
+  m_Name: Interact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4116,7 +4116,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press "E" or "MB1" to open
+  m_text: 'Press "E" or "MB1" to interact
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f6c9a150ee7cb1c2da5f670dbd6f632d, type: 2}
   m_sharedMaterial: {fileID: -7247541299401507632, guid: f6c9a150ee7cb1c2da5f670dbd6f632d, type: 2}
@@ -10952,6 +10954,7 @@ MonoBehaviour:
   closedDoorText: {fileID: 1105746595}
   blockedDoorText: {fileID: 667304580}
   openDoorText: {fileID: 390563434}
+  interact: {fileID: 390563434}
   startTime: 0
   viewDistance: 1
   obectPlayerRadio: {fileID: 1492432309}

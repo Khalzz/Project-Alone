@@ -22,6 +22,7 @@ public class PlayerRaycasting : MonoBehaviour
     public TextMeshProUGUI closedDoorText;
     public TextMeshProUGUI blockedDoorText;
     public TextMeshProUGUI openDoorText;
+    public TextMeshProUGUI interact;
     //objetos de "ui"
 
     //reparacion bug textoInteraccion
@@ -109,7 +110,7 @@ public class PlayerRaycasting : MonoBehaviour
         cantSeeText.color = new Color32(255,255,255,0);
         closedDoorText.color = new Color32(255,255,255,0);
         blockedDoorText.color = new Color32(255,255,255,0);
-        openDoorText.color = new Color32(255,255,255,0);
+        interact.color = new Color32(255,255,255,0);
 
         switchPostItsMenu.SetActive(false);
         fridgePostItsMenu.SetActive(false);
@@ -212,19 +213,19 @@ public class PlayerRaycasting : MonoBehaviour
         {
             closedDoorText.color = new Color32(255,255,255,255);
             blockedDoorText.color = new Color32(255,255,255,0);
-            openDoorText.color = new Color32(255,255,255,0);
+            interact.color = new Color32(255,255,255,0);
         }
         else if (touchTheBlockedDoor == true && itsTouchingTheBlockedDoor == true) 
         {
             closedDoorText.color = new Color32(255,255,255,0);
             blockedDoorText.color = new Color32(255,255,255,255);
-            openDoorText.color = new Color32(255,255,255,0); 
+            interact.color = new Color32(255,255,255,0); 
         }
         else if (touchTheOpenDoor == true && itsTouchingTheOpenDoor == true) 
         {
             closedDoorText.color = new Color32(255,255,255,0);
             blockedDoorText.color = new Color32(255,255,255,0);
-            openDoorText.color = new Color32(255,255,255,255);
+            interact.color = new Color32(255,255,255,255);
             if (Input.GetButtonDown("Action") && theDoorIsClosed == true)
             {
                 theDoorIsClosed = false;
@@ -234,7 +235,7 @@ public class PlayerRaycasting : MonoBehaviour
         {
             closedDoorText.color = new Color32(255,255,255,0);
             blockedDoorText.color = new Color32(255,255,255,0);
-            openDoorText.color = new Color32(255,255,255,0); 
+            interact.color = new Color32(255,255,255,0); 
         } 
 
         if(touchThePhone == true && itsTouchingThePhone == true)
@@ -243,11 +244,11 @@ public class PlayerRaycasting : MonoBehaviour
         }
         else if(touchTheSwitch == true && itsTouchingTheSwitch == true)
         {
-            isTurnedOff.color = new Color32(255,255,255,255);
+            interact.color = new Color32(255,255,255,255);
         }
         else if(touchTheSwitch2 == true && itsTouchingTheSwitch2 == true)
         {
-            isTurnedOff.color = new Color32(255,255,255,255);
+            interact.color = new Color32(255,255,255,255);
         }
         else
         {
@@ -270,7 +271,7 @@ public class PlayerRaycasting : MonoBehaviour
         cantSeeText.color = new Color32(255,255,255,0);
         closedDoorText.color = new Color32(255,255,255,0);
         blockedDoorText.color = new Color32(255,255,255,0);
-        openDoorText.color = new Color32(255,255,255,0); 
+        interact.color = new Color32(255,255,255,0); 
 
         Cursor.lockState = CursorLockMode.None;
         switchPostItMenuState = true;
@@ -291,7 +292,7 @@ public class PlayerRaycasting : MonoBehaviour
         cantSeeText.color = new Color32(255,255,255,0);
         closedDoorText.color = new Color32(255,255,255,0);
         blockedDoorText.color = new Color32(255,255,255,0);
-        openDoorText.color = new Color32(255,255,255,0); 
+        interact.color = new Color32(255,255,255,0); 
 
         Cursor.lockState = CursorLockMode.None;
         switchPostItMenuState = true;
@@ -312,7 +313,7 @@ public class PlayerRaycasting : MonoBehaviour
         cantSeeText.color = new Color32(255,255,255,0);
         closedDoorText.color = new Color32(255,255,255,0);
         blockedDoorText.color = new Color32(255,255,255,0);
-        openDoorText.color = new Color32(255,255,255,0); 
+        interact.color = new Color32(255,255,255,0); 
 
         Cursor.lockState = CursorLockMode.None;
         secondPostItMenuState = true;
@@ -333,7 +334,7 @@ public class PlayerRaycasting : MonoBehaviour
         cantSeeText.color = new Color32(255,255,255,0);
         closedDoorText.color = new Color32(255,255,255,0);
         blockedDoorText.color = new Color32(255,255,255,0);
-        openDoorText.color = new Color32(255,255,255,0); 
+        interact.color = new Color32(255,255,255,0); 
 
         Cursor.lockState = CursorLockMode.None;
         thirdPostItMenuState = true;
@@ -354,7 +355,7 @@ public class PlayerRaycasting : MonoBehaviour
         cantSeeText.color = new Color32(255,255,255,0);
         closedDoorText.color = new Color32(255,255,255,0);
         blockedDoorText.color = new Color32(255,255,255,0);
-        openDoorText.color = new Color32(255,255,255,0); 
+        interact.color = new Color32(255,255,255,0); 
 
         Cursor.lockState = CursorLockMode.None;
         lastPostItMenuState = true;
@@ -404,7 +405,7 @@ public class PlayerRaycasting : MonoBehaviour
             cantSeeText.color = new Color32(255,255,255,0);
             closedDoorText.color = new Color32(255,255,255,0);
             blockedDoorText.color = new Color32(255,255,255,0);
-            openDoorText.color = new Color32(255,255,255,0); 
+            interact.color = new Color32(255,255,255,0); 
         }
     }
 }
