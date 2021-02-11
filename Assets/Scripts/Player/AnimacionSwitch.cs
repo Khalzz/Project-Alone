@@ -10,7 +10,7 @@ public class AnimacionSwitch : MonoBehaviour
     {
         animation = this.gameObject.GetComponent<Animation>();
     }
-
+ 
     void Update()
     {
         //activar animacion de prender la luza cuando esta accion ocurre
