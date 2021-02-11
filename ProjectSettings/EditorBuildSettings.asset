@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/House 1.unity
     guid: 6f35f4c6cf63af00397d6fd3f221067f
+  - enabled: 1
+    path: Assets/Scenes/Dream 1.unity
+    guid: f1a158d7b930c83b9873118f072d2b2b
   m_configObjects: {}
