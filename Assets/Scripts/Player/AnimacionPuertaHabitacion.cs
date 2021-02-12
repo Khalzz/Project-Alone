@@ -18,6 +18,18 @@ public class AnimacionPuertaHabitacion : MonoBehaviour
 
     void Update() 
     {
+        if (PlayerRaycasting.doorState == 2) 
+        {
+            Debug.Log("algo paso :o");
+            animation.Play("closeDoor");
+            actualTime += 1 * Time.deltaTime;
+            time = actualTime.ToString("F0");
+            if (time == "4") 
+            {
+                actualTime = 0f;
+                PlayerRaycasting.theDoorIsOpen = false;
+            }
+        }
         
         if (PlayerRaycasting.doorState == 1)
         {
@@ -31,16 +43,6 @@ public class AnimacionPuertaHabitacion : MonoBehaviour
             }
         }
 
-        if (PlayerRaycasting.doorState == 2) 
-        {
-            animation.Play("closeDoor");
-            actualTime += 1 * Time.deltaTime;
-            time = actualTime.ToString("F0");
-            if (time == "4") 
-            {
-                actualTime = 0f;
-                PlayerRaycasting.theDoorIsOpen = false;
-            }
-        }
+        
     }
 }
