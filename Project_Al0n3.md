@@ -65,9 +65,9 @@ En esta parte de la documentación voy a hacer énfasis de problemas técnicos t
 
   La función de estos debería ser representar los "actos" del protagonista como una historia ficticia la cual deberá en segundo plano ser una ilustración detallada de lo que el protagonista le hizo a una persona desconocida antes de acabar en su estado actual.
 
-  >Entre las entrañas del humo y las sombras aparecio el, dandole la mano a la niña para salvarla del barro y el mal aparente en la obscuridad de la noche.
+  >Entre las entrañas del humo y las sombras apareció el, dándole la mano a la niña para salvarla del barro y el mal aparente en la obscuridad de la noche.
 
-  > Entre llantos y gritos sus captores buscaban la forma de tenerla de vuelta, el hombre la atrajo a un vehiculo con el que conducio hacia su hogar.
+  > Entre llantos y gritos sus captores buscaban la forma de tenerla de vuelta, el hombre la atrajo a un vehículo con el que condujo hacia su hogar.
 
   > (en el refrigerador) lista de compra:
 >
@@ -79,27 +79,27 @@ En esta parte de la documentación voy a hacer énfasis de problemas técnicos t
   > + **ginebra**
   > + **cigarros**
   >
-  > estos 2 ultimos deben estar MUY remarcados
+  > estos 2 últimos deben estar MUY remarcados
 
-  > Alli le presento su nueva vida, finalmente la niña nunca volveria a tener alguna necesidad.
+  > Allí le presento su nueva vida, finalmente la niña nunca volvería a tener alguna necesidad.
 
-  > Una noche la niña desperto entre sollozos y rompio en llanto sintiendose sola, el hombre, su principe vino a su rescate y con la suavidad de sus manos y el poder de un beso, logro salvarla de ese llanto incontrolable, la joven volvio a dormir mientras abrazaba la almohada como si esta no quisiera dejarla ir nunca.
+  > Una noche la niña despertó entre sollozos y rompió en llanto sintiéndose sola, el hombre, su príncipe vino a su rescate y con la suavidad de sus manos y el poder de un beso, logro salvarla de ese llanto incontrolable, la joven volvió a dormir mientras abrazaba la almohada como si esta no quisiera dejarla ir nunca.
 
-  > Al despertar sintio un frio sentimiento metalico junto con un dolor agudo al rededor de sus piernas, los cortes se convinaban con frio del hielo tocando su cuerpo casi sedado.
+  > Al despertar sintió un frió sentimiento metálico junto con un dolor agudo al rededor de sus piernas, los cortes se combinaban con frió del hielo tocando su cuerpo casi sedado.
 
-  > Su cuerpo se sentia helado, aun que no sabia si era por el agua y hielo que la rodeaba o por el mismo sedante que lentamente apagaba el dolor que provenia de sus piernas.
+  > Su cuerpo se sentía helado, aun que no sabia si era por el agua y hielo que la rodeaba o por el mismo sedante que lentamente apagaba el dolor que provenía de sus piernas.
 
-  > inmediatamente empezo a sentir los cortes en sus brazos, pero lentamente este dolor se transformo en una sensacion calida.
+  > inmediatamente empezó a sentir los cortes en sus brazos, pero lentamente este dolor se transformo en una sensación cálida.
 
-  > Cuando el dolor se acerco a su pecho todo se volvio obscuro, no sentia su cuerpo pero aun asi se sentia muy viva.
+  > Cuando el dolor se acerco a su pecho todo se volvió obscuro, no sentía su cuerpo pero aun así se sentía muy viva.
 
-  > Al quitarse la venda que cubria sus bellos ojos ya nadie la acompañaba, estaba sola en una bañera cubierta de hielos teñidos de rojo.
+  > Al quitarse la venda que cubría sus bellos ojos ya nadie la acompañaba, estaba sola en una bañera cubierta de hielos teñidos de rojo.
 
-  > Pero al levantarse se veia totalmente intacta, su piel segia suave como la seda, al salir del tetrico baño vio una hermosa sala, pero bañada en una niebla tan densa al aire, como la sangre al agua.
+  > Pero al levantarse se veía totalmente intacta, su piel seguía suave como la seda, al salir del tétrico baño vio una hermosa sala, pero bañada en una niebla tan densa al aire, como la sangre al agua.
 
-  > La puerta principal no presentaba algun bloqueo pero ella no era capaz de abrirla, como si sus fuerzas se desvanesieran al acercarse a la misma, ella no sentia que debiera irse pues finalmente descubrio la paz que ese lugar le generaba.
+  > La puerta principal no presentaba algún bloqueo pero ella no era capaz de abrirla, como si sus fuerzas se desvanecieran al acercarse a la misma, ella no sentía que debiera irse pues finalmente descubrió la paz que ese lugar le generaba.
 
-  > Desde ese dia habita las salas sola, abriendo y cerrando puertas al azar, a veces puede ver al principe que la llevo ahi y recuerda esos dias de paz y compañia, deseando volver y abrazar al hombre que la hizo tan feliz.
+  > Desde ese día habita las salas sola, abriendo y cerrando puertas al azar, a veces puede ver al príncipe que la llevo ahí y recuerda esos días de paz y compañía, deseando volver y abrazar al hombre que la hizo tan feliz.
 
 ---
 
@@ -123,7 +123,7 @@ El baño, la salida, una habitación y la cocina son las únicas puertas que se 
 
   ---
 
-+ La habitación puedes abrirla facilmente y en su interior ves tu habitacion, una cama grande, un mueble con una lampara que genera una luz tenue y un escritorio con un computador cerrado/apagado.
++ La habitación puedes abrirla fácilmente y en su interior ves tu habitación, una cama grande, un mueble con una lampara que genera una luz tenue y un escritorio con un computador cerrado/apagado.
 
   ---
 
@@ -133,13 +133,29 @@ El baño, la salida, una habitación y la cocina son las únicas puertas que se 
   
   ---
 
-La cama es un objeto con el que puedes interactuar, y al acercarte a la cama tu personaje se acuesta en ella y duerme, al hacerlo todo se pone en negro y.
+La cama es un objeto con el que puedes interactuar, al acercarte a la cama tu personaje se acuesta en ella y duerme, al hacerlo todo se pone en negro.
 
 ---
 
 # Project_Al0n3 acto 2
 
-**coming soon**
+Al cerrar los ojos apareces en un lugar totalmente obscuro y a lo lejos ves una puerta junto a una linea blanca que te ayuda a definir el camino hacia ella.
+
+Al salir de esa rara habitación obscura como el vació mismo puedes observar con claridad que estas dentro de una cueva, ciertas linternas te iluminan el camino hacia una esquina.
+
+**dato técnico: **al llegar a esa esquina y perder toda la capacidad de ver la habitación en la que estabas esta debe desaparecer (preferiblemente adelantar una "roca" para dar la ilusión de que es parte de la cueva)
+
+Tras avanzar unos pasos encuentras 2 agujeros separados por piedra maciza y con un cartel entre medio con 2 flechas:
+
++ go :D -->
+
++ <-- don't go D:
+
+  el cartel de "dont't go" esta manchado en sangre y lo único que distingues de ambas entradas es que la que dice "go" esta bien iluminada mientras que la contraria contiene una pequeña muestra de luz
+
+  (**plot twist: ambas puertas te llevan al mismo lugar y no afectan nada tu avance**)
+
+**Al llegar a la salida te encuentras con un hermoso paisaje soleado**, grandes arboles que tapan la llegada del sol pero no lo suficiente, por lo que pues ver el sol llegando hacia ti y apuntando fuerte como un bello día de primavera (idea general: hacer al jugador pensar "¿realmente es de terror esto?" **esta idea debe atormentar al jugador**).
 
 ---
 
