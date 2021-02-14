@@ -28,7 +28,7 @@ public class sleepAnimation : MonoBehaviour
 
     void Update() 
     {
-        if (PlayerRaycasting.sleeping == true) 
+        if (PlayerInteractions.sleeping == true) 
         {
             animation.Play("goToSleep");
             CameraMovement.mouseSensibility = 0f;

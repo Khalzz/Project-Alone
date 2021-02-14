@@ -2883,7 +2883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 246925375}
   - component: {fileID: 246925376}
-  m_Layer: 5
+  m_Layer: 13
   m_Name: Switch Post Its
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8321,7 +8321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 833136913}
   - component: {fileID: 833136914}
-  m_Layer: 5
+  m_Layer: 16
   m_Name: Third Post Its
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11406,18 +11406,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1181674665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ca8733cc885ed9b4a830d9d436d50b8, type: 3}
+  m_Script: {fileID: 11500000, guid: b9140d4c851d7fe1a8ee215d2d689e01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pointOfView: {fileID: 314546060}
-  phoneMenu: {fileID: 348070784}
+  phoneMenu: {fileID: 246925374}
   eye: {fileID: 1246014084}
   closedEye: {fileID: 1564678593}
   isTurnedOff: {fileID: 1618901955}
   cantSeeText: {fileID: 1080937842}
   closedDoorText: {fileID: 1105746595}
   blockedDoorText: {fileID: 667304580}
-  openDoorText: {fileID: 390563434}
   interact: {fileID: 390563434}
   startTime: 0
   viewDistance: 1
@@ -18875,7 +18874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1964797035}
   - component: {fileID: 1964797036}
-  m_Layer: 5
+  m_Layer: 15
   m_Name: Second Post Its
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18924,7 +18923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2007056190}
   - component: {fileID: 2007056191}
-  m_Layer: 5
+  m_Layer: 17
   m_Name: Last Post Its
   m_TagString: Untagged
   m_Icon: {fileID: 0}

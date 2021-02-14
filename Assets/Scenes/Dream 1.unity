@@ -435,7 +435,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh50014
+  m_Name: pb_Mesh16030
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -599,7 +599,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh50076
+  m_Name: pb_Mesh16092
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -927,7 +927,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh50114
+  m_Name: pb_Mesh16130
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2525,7 +2525,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh50328
+  m_Name: pb_Mesh16346
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2956,6 +2956,7 @@ GameObject:
   - component: {fileID: 477960009}
   - component: {fileID: 477960008}
   - component: {fileID: 477960007}
+  - component: {fileID: 477960011}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -3003,48 +3004,33 @@ MonoBehaviour:
   viewDistance: 1
   obectPlayerRadio: {fileID: 1002884702}
   lightSwitch:
-    serializedVersion: 2
     m_Bits: 512
   lightSwitch2:
-    serializedVersion: 2
     m_Bits: 1024
   phone:
-    serializedVersion: 2
     m_Bits: 2048
   switchPostIts:
-    serializedVersion: 2
     m_Bits: 8192
   switchPostItsMenu: {fileID: 0}
   fridgePostIt:
-    serializedVersion: 2
     m_Bits: 16384
   fridgePostItsMenu: {fileID: 0}
   secondPostIts:
-    serializedVersion: 2
     m_Bits: 32768
   secondPostItsMenu: {fileID: 0}
   thirdPostIts:
-    serializedVersion: 2
     m_Bits: 65536
   thirdPostItsMenu: {fileID: 0}
   lastPostIts:
-    serializedVersion: 2
     m_Bits: 131072
   lastPostItsMenu: {fileID: 0}
   closedDoor:
-    serializedVersion: 2
     m_Bits: 1048576
   blockedDoor:
-    serializedVersion: 2
     m_Bits: 524288
   openDoor:
-    serializedVersion: 2
     m_Bits: 2097152
-  whiteDoor:
-    serializedVersion: 2
-    m_Bits: 4194304
   bed:
-    serializedVersion: 2
     m_Bits: 8388608
 --- !u!114 &477960008
 MonoBehaviour:
@@ -3110,6 +3096,71 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &477960011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477960005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9140d4c851d7fe1a8ee215d2d689e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointOfView: {fileID: 589302146}
+  phoneMenu: {fileID: 581994989}
+  eye: {fileID: 1577701625}
+  closedEye: {fileID: 1734159820}
+  isTurnedOff: {fileID: 1498695018}
+  cantSeeText: {fileID: 2147407713}
+  closedDoorText: {fileID: 126719164}
+  blockedDoorText: {fileID: 2104668912}
+  interact: {fileID: 154034046}
+  startTime: 0
+  viewDistance: 1
+  obectPlayerRadio: {fileID: 1002884702}
+  lightSwitch:
+    serializedVersion: 2
+    m_Bits: 512
+  lightSwitch2:
+    serializedVersion: 2
+    m_Bits: 1024
+  phone:
+    serializedVersion: 2
+    m_Bits: 2048
+  switchPostIts:
+    serializedVersion: 2
+    m_Bits: 8192
+  switchPostItsMenu: {fileID: 1814302912}
+  fridgePostIt:
+    serializedVersion: 2
+    m_Bits: 16384
+  fridgePostItsMenu: {fileID: 1691515217}
+  secondPostIts:
+    serializedVersion: 2
+    m_Bits: 32768
+  secondPostItsMenu: {fileID: 150388292}
+  thirdPostIts:
+    serializedVersion: 2
+    m_Bits: 65536
+  thirdPostItsMenu: {fileID: 572732619}
+  lastPostIts:
+    serializedVersion: 2
+    m_Bits: 131072
+  lastPostItsMenu: {fileID: 1191453963}
+  closedDoor:
+    serializedVersion: 2
+    m_Bits: 1048576
+  blockedDoor:
+    serializedVersion: 2
+    m_Bits: 524288
+  openDoor:
+    serializedVersion: 2
+    m_Bits: 2097152
+  bed:
+    serializedVersion: 2
+    m_Bits: 8388608
 --- !u!1 &528533362
 GameObject:
   m_ObjectHideFlags: 0
@@ -3776,7 +3827,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh49704
+  m_Name: pb_Mesh15722
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6441,7 +6492,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh49986
+  m_Name: pb_Mesh16002
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6713,6 +6764,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1455250273}
   m_CullTransparentMesh: 0
+--- !u!1 &1464552150
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464552153}
+  - component: {fileID: 1464552152}
+  - component: {fileID: 1464552151}
+  m_Layer: 0
+  m_Name: white door trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1464552151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464552150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a3650a15e03e9139f7bfb0ce608abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whiteDoor: {fileID: 1642590165}
+--- !u!65 &1464552152
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464552150}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 3.7545204, z: 7.616749}
+  m_Center: {x: 0, y: 1.6372602, z: 0.0037078857}
+--- !u!4 &1464552153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464552150}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.02, y: 0.24, z: 8.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1496917960
 GameObject:
   m_ObjectHideFlags: 0
@@ -8568,7 +8677,7 @@ GameObject:
   - component: {fileID: 1642590169}
   - component: {fileID: 1642590168}
   - component: {fileID: 1642590167}
-  m_Layer: 22
+  m_Layer: 0
   m_Name: room door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9519,7 +9628,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh50126
+  m_Name: pb_Mesh16142
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9957,7 +10066,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh57012
+  m_Name: pb_Mesh16162
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10953,7 +11062,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh49814
+  m_Name: pb_Mesh15830
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

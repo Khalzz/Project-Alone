@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimacionPuertaHabitacion : MonoBehaviour
+public class Door1Animation : MonoBehaviour
 {
 
     Animation animation;
@@ -18,28 +18,27 @@ public class AnimacionPuertaHabitacion : MonoBehaviour
 
     void Update() 
     {
-        if (PlayerRaycasting.doorState == 2) 
+        if (PlayerInteractions.doorState == 2) 
         {
-            Debug.Log("algo paso :o");
             animation.Play("closeDoor");
             actualTime += 1 * Time.deltaTime;
             time = actualTime.ToString("F0");
             if (time == "4") 
             {
                 actualTime = 0f;
-                PlayerRaycasting.theDoorIsOpen = false;
+                PlayerInteractions.theDoorIsOpen = false;
             }
         }
         
-        if (PlayerRaycasting.doorState == 1)
+        if (PlayerInteractions.doorState == 1)
         {
-            animation.Play("abrirPuerta");
+            animation.Play("openDoor");
             actualTime += 1 * Time.deltaTime;
             time = actualTime.ToString("F0");
             if (time == "3") 
             {
                 actualTime = 0f;
-                PlayerRaycasting.theDoorIsOpen = true;
+                PlayerInteractions.theDoorIsOpen = true;
             }
         }
 

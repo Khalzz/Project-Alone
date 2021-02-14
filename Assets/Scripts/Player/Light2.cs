@@ -21,7 +21,7 @@ public class Light2 : MonoBehaviour
 
     void Update()
     {
-        if(PlayerRaycasting.touchTheSwitch2 == true && PlayerRaycasting.itsTouchingTheSwitch2 == true)
+        if(PlayerInteractions.touchTheSwitch2 == true && PlayerInteractions.itsTouchingTheSwitch2 == true)
         {
             if (Input.GetButtonDown("Action"))
             {

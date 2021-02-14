@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EstadoPausa : MonoBehaviour
+public class PauseState : MonoBehaviour
 {
 
     static public int ending = 0;
     
     static public void changeState(){
-        PlayerRaycasting.phoneMenuState = true;
+        PlayerInteractions.phoneMenuState = true;
     }
 
     public void endingBackgroundWeigh(){

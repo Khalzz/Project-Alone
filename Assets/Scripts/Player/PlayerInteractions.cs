@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerRaycasting : MonoBehaviour
+public class PlayerInteractions : MonoBehaviour
 {
     static public bool lightState;
 
@@ -21,7 +21,6 @@ public class PlayerRaycasting : MonoBehaviour
     public TextMeshProUGUI cantSeeText;
     public TextMeshProUGUI closedDoorText;
     public TextMeshProUGUI blockedDoorText;
-    public TextMeshProUGUI openDoorText;
     public TextMeshProUGUI interact;
     //objetos de "ui"
 
@@ -106,13 +105,6 @@ public class PlayerRaycasting : MonoBehaviour
     static public bool theDoorIsOpen;
     static public int doorState;
 
-    public LayerMask whiteDoor;
-    static public bool itsTouchingTheWhiteDoor;
-    static public bool touchTheWhiteDoor;
-    static public bool theWhiteDoorIsClosed;
-    static public bool theWhiteDoorIsOpen;
-    static public int whiteDoorState;
-
     public LayerMask bed;
     static public bool itsTouchingTheBed;
     static public bool touchTheBed;
@@ -123,8 +115,6 @@ public class PlayerRaycasting : MonoBehaviour
         sleeping = false;
         doorState = 0;
         theDoorIsOpen = false;
-        whiteDoorState = 0;
-        theWhiteDoorIsOpen = false;
         eye.SetActive(false);
         closedEye.SetActive(false);
         cantSeeText.color = new Color32(255,255,255,0);
@@ -159,7 +149,6 @@ public class PlayerRaycasting : MonoBehaviour
         itsTouchingTheClosedDoor = Physics.CheckSphere(obectPlayerRadio.position, 1f, closedDoor);
         itsTouchingTheBlockedDoor = Physics.CheckSphere(obectPlayerRadio.position, 1f, blockedDoor);
         itsTouchingTheOpenDoor = Physics.CheckSphere(obectPlayerRadio.position, 1f, openDoor);
-        itsTouchingTheWhiteDoor = Physics.CheckSphere(obectPlayerRadio.position, 1f, whiteDoor);
 
         itsTouchingTheBed = Physics.CheckSphere(obectPlayerRadio.position, 1f, bed);
 
@@ -177,7 +166,6 @@ public class PlayerRaycasting : MonoBehaviour
         touchTheClosedDoor = Physics.Raycast(this.transform.position, this.transform.forward, out closedDoorRc, 2, closedDoor);  
         touchTheBlockedDoor = Physics.Raycast(this.transform.position, this.transform.forward, out blockedDoorRc, 2, blockedDoor);  
         touchTheOpenDoor = Physics.Raycast(this.transform.position, this.transform.forward, out openDoorRc, 2, openDoor); 
-        touchTheWhiteDoor = Physics.Raycast(this.transform.position, this.transform.forward, out whiteDoorRc, 2, whiteDoor); 
 
         touchTheBed = Physics.Raycast(this.transform.position, this.transform.forward, out bedRc, 2, bed);  
         
@@ -207,20 +195,6 @@ public class PlayerRaycasting : MonoBehaviour
                 doorState = 1; //open the door
             }
             if (Input.GetButtonDown("Action") && theDoorIsOpen == true)
-            {
-                doorState = 2; //close the door
-            }
-        }
-        else if (touchTheWhiteDoor == true && itsTouchingTheWhiteDoor == true) 
-        {
-            closedDoorText.color = new Color32(255,255,255,0);
-            blockedDoorText.color = new Color32(255,255,255,0);
-            interact.color = new Color32(0,0,0,255);
-            if (Input.GetButtonDown("Action") && theWhiteDoorIsOpen == false)
-            {
-                doorState = 1; //open the door
-            }
-            if (Input.GetButtonDown("Action") && theWhiteDoorIsOpen == true)
             {
                 doorState = 2; //close the door
             }
