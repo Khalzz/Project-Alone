@@ -155,7 +155,7 @@ Tras avanzar unos pasos encuentras 2 agujeros separados por piedra maciza y con 
 
   (**plot twist: ambas puertas te llevan al mismo lugar y no afectan nada tu avance**)
 
-**Al llegar a la salida te encuentras con un hermoso paisaje soleado**, grandes arboles que tapan la llegada del sol pero no lo suficiente, por lo que pues ver el sol llegando hacia ti y apuntando fuerte como un bello día de primavera (idea general: hacer al jugador pensar "¿realmente es de terror esto?" **esta idea debe atormentar al jugador**).
+**Al llegar a la salida ves una amplia habitacion de un edificio la cual de por si se ve gigante por dentro, lleno de escritorios vacios (al salir del mismo te das cuenta que es solo una casita pequeña con una puerta cerrada que ya no puedes abrir).**
 
 ---
 
