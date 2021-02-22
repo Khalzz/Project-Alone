@@ -155,7 +155,13 @@ Tras avanzar unos pasos encuentras 2 agujeros separados por piedra maciza y con 
 
   (**plot twist: ambas puertas te llevan al mismo lugar y no afectan nada tu avance**)
 
-**Al llegar a la salida ves una amplia habitacion de un edificio la cual de por si se ve gigante por dentro, lleno de escritorios vacios (al salir del mismo te das cuenta que es solo una casita pequeña con una puerta cerrada que ya no puedes abrir).**
+Al llegar a la salida de la cueva ves que estas encerrado dentro de una sala similar a un salon de clases a obscuras y en una pared lejana aprecias una pequeña puerta blanca brillante la cual al ser abierta te permite entrar a una sala gigante que solo contiene un agujero enorme al centro.
+
+al acercarte ves que baja un acensor circular de tipo industrial (si caes por el agujero el personaje se despierta, te has saltado el sueño dado la caida) si no, al usar el acensor este bajara hacia una habitacion totalmente negra como la del principio.
+
+en esta se puede ver un telefono sobre una mesa circular abruptamente iluminada por una luz colgada del techo (referencia a Stanley Parable).
+
+al acercarte este empieza a sonar y si interactuas con el telefono el sueño termina (al volver al mundo real el celuñar del personaje principal suena con el mismo tono que el del sueño).
 
 ---
 
