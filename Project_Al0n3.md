@@ -155,58 +155,54 @@ Tras avanzar unos pasos encuentras 2 agujeros separados por piedra maciza y con 
 
   (**plot twist: ambas puertas te llevan al mismo lugar y no afectan nada tu avance**)
 
-Al llegar a la salida de la cueva ves que estas encerrado dentro de una sala similar a un salon de clases a obscuras y en una pared lejana aprecias una pequeña puerta blanca brillante la cual al ser abierta te permite entrar a una sala gigante que solo contiene un agujero enorme al centro.
+Al llegar a la salida de la cueva ves que estas encerrado dentro de una sala similar a un salón de clases a obscuras y en una pared lejana aprecias una pequeña puerta blanca brillante la cual al ser abierta te permite entrar a una sala gigante y vacía, una habitación totalmente negra como la del principio.
 
-al acercarte ves que baja un acensor circular de tipo industrial (si caes por el agujero el personaje se despierta, te has saltado el sueño dado la caida) si no, al usar el acensor este bajara hacia una habitacion totalmente negra como la del principio.
+Al final de un largo puente encuentras un pequeño espacio circular.
 
-en esta se puede ver un telefono sobre una mesa circular abruptamente iluminada por una luz colgada del techo (referencia a Stanley Parable).
+En esta se puede ver un teléfono sobre una mesa circular abrupta mente iluminada por una luz colgada del techo (referencia a Stanley Parable).
 
-al acercarte este empieza a sonar y si interactuas con el telefono el sueño termina (al volver al mundo real el celuñar del personaje principal suena con el mismo tono que el del sueño).
+al acercarte este empieza a sonar y si interactuas con el teléfono este cae y se contesta (la música se para abrupta-mente y inicia una música un poco burlona).
 
----
+(se escucha a un hombre balbucear)
 
-# posible
+\-  **(se aclara la garganta)** entonces, el jugador entra a la habitación (se prende una luz alumbrando a la puerta) camina por la pasarela lentamente (se prende una luz en el puente) y finalmente, el jugador contesta el teléfono! (se mantiene un tono de intriga alto hasta que el jugador realmente interactua con el teléfono.) 
 
-**En la mesa del living hay un celular, al interactuar con el hay 3 opciones:**
+Ahhhhhh, jugador? que haces aquí?, deberías estar en otro juego mientras este se termina, no aquí hablando conmigo, estas loco? sabes lo que hara el programador cuando se entere de que estoy interactuando contigo antes de tiempo?.
 
-1. dejar de imagen de bloqueo una imagen en blanco [final 1](#Final-1)
-2. dejar de imagen de bloqueo un screenshot de una nota que pide perdón [final 2](#Final-2)
-3. dejar de imagen de bloqueo una imagen normal [final 3](#Final-3)
+Ah mierda, ni siquiera esta terminado el juego!!!, AHHHHH.
 
-Tras esto empezara a sonar la puerta principal muy fuerte, alguien toca y no sabemos por que "abre la puerta" "por favor" "se que estas ahí" "heeeeee-...!!!!" el grito se corta a la mitad al entrar en la habitación principal (esta se abre al revisar el celular).
+Bueno, quizá deberé hacerte un apoyo antes de tiempo.
 
-Al entrar se aprecia una cama, un mueble con una lampara a demás de un escritorio con un computador cerrado, aun así la luz tenue de la lampara genera el sentimiento de vació.
+**(una puerta se abre tras el teléfono)** bueno, sal por esa puerta si eres tan amable, así saldrás del juego y podrás hacer otras cosas mientras el juego se termina. (si el jugador sale de la habitación por la puerta el juego se cerrara).
 
-## Final 1 (Pesar)
+La puerta te espera!
 
-se genera al elegir como fondo de pantalla una nota pidiendo perdón
+No crees que el otro lado de esa puerta se ve un poco... Sexy (decir con voz sensual).
 
-El jugador llega a un pasillo largo cubierto de fotos que ahogan las paredes, frente a el hay una puerta y al abrirla lo único que  diferencias es un blanco segador **inicia una música angelical de violín la cual representa paz y de una forma peculiar, llegando a las notas altas de este, baja rotundamente a notas rotas sin armonía y con un fin terrorífico, algo anda mal**, se apagan las luces, detrás de ti no hay nada mas que una lampara apuntando hacia un teléfono sobre una mesa (referencia a stanley parable).
+Bueno, veo que tu gusto por las puertas no es tan fuerte como el mio, si me perdonas la puerta sera para mi (la puerta se cierra)
 
-Este sonara y al acercarte e interinar con el suenan risas, niños riendo, el juego se funde a negro, se aprecia una puerta en un fondo negro(continuara) (el juego se cierra permitiendo al jugador sentirse solo y quedarse con el silencio de su escritorio)... 
+Bueno, seamos un poco mas técnicos (se escucha un foco prenderse) ahí puedes ver un interruptor, este apagara el juego al ser presionado y te va a permitir ir a hacer otras cosas mientras tanto.
 
-> Cuidado con la obscuridad del pasaje conocido,<br>las cosas desaparecen y aparecen cuando no las vez,<br>el remordimiento atormentara al que no esperaba una pérdida <br>y la muerte buscara a quien no se espere su aparición.
+No es por culpar al programador, pero no has notado que no existe un botón de salir aun?.
 
----
+Ve y tira de la palanca.
 
-## Final 2 (Culpa)
+Vamos!!!!.
 
-se genera al elegir como fondo de pantalla del celular una "imagen de una nota de suicidio pidiendo perdón".
+Bueno si no quieres hacerlo tendré que ponerme diplomático.
 
-**Se que es difícil de afrontar especialmente después de cagarla como la cague contigo, espero que si no me perdones en esta vida puedas hacerlo en la siguiente, aveces solo quería desaparecer contigo, pero no fui yo el que desapareció sino tu y tu luz, no es una despedida, sino un hasta luego, especialmente al recordar que todas las mentiras que dijeron de mi, me llevaron a elegir el camino mas fácil y especialmente el que demuestra que lo siento realmente, aun mas el que me permite decirte que lo siento, específicamente a ti, aun que no quieras, nos en el cielo.. si este aun existe para mi.**
+O jalas de esa palanca!!! o te asustare!!!!.
 
-**~~con amor para~~ (tajado) tu sabes quien eres.**
+Wow, bueno, me veo en obligación de hacerlo, aquí va. (la música se para, inicia una música tensa y tras unos segundos aparece un gatito en un png)
 
-Al llegar al pasillo este tiene en las paredes múltiples imágenes del payaso pero cambiadas por una cara grotesca que mira fijamente al jugador.
+ven, puedes acariciar el gatito (si acaricias el gatito con tensión este solo va a maullar)
 
-Todas estas te ven directamente y solo se logra ver una puerta al final de este pasillo y unas pocas cosas en la misma sala, los múltiples murmullos dejan de escucharse.
+oh que raro, nada ha ocurrido, bueno aun puedes venir y presionar la palanca (el jugador al darse vuelta recibe un screamer (ideal que sea ligero y algo muy tonto))
 
-Al entrar en la puerta esta se cierra y lentamente aparece la misma imagen constantemente en la misma habitación "se escuchan risas y estas se hacen mas ruidosas, cuando llegan a cierto punto, toda la habitación se vuelve roja brillante, los gritos paran y el juego se cierra".
+hahahahahahahaah, sabia que lo lograría, caíste en el truco mas viejo en el libro.
 
-(Al iniciar el juego de nuevo se ve la habitación del inicio pero en la cocina hay una luz negra, la imagen de la pared tiene la cara macabra y en la tele se ven letras que al unirse generan la palabra "es tu culpa", "tu lo hiciste" y "valió la pena?","**¿Quien es el payaso? cuya vida es un cúmulo emocionante de mierda y su chiste mas gracioso es su propia existencia.**").
+bueno, te dejare pasar pero trata de no contarle al programador de que estas aqui, si lo ves dile que el diseñador te dejo continuar ok?, bueno usa esta puerta para despertar (se abre una puerta, si la pasas todo se pone en negro y salta un screamer con el gatito) Hehehehehe, nunca falla (el jugador se despierta).
 
 ---
 
-## Final 3 (Indiferencia)
-
-El personaje llega a un pasillo obscuro donde  lo único que aprecia es la puerta abriéndose, el fondo es obscuro y vació, apenas denotas algún tipo de objeto al fondo, al entrar se prende una luz al final de un túnel muy lejano, al llegar todo termina como en el final de "**Culpa**".
+Project_Al0n3 acto 2
