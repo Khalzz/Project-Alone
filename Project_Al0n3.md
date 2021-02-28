@@ -163,46 +163,22 @@ En esta se puede ver un teléfono sobre una mesa circular abrupta mente iluminad
 
 al acercarte este empieza a sonar y si interactuas con el teléfono este cae y se contesta (la música se para abrupta-mente y inicia una música un poco burlona).
 
-(se escucha a un hombre balbucear)
+y aqui esta  **!!!el jugador!!!**.
 
-\-  **(se aclara la garganta)** entonces, el jugador entra a la habitación (se prende una luz alumbrando a la puerta) camina por la pasarela lentamente (se prende una luz en el puente) y finalmente, el jugador contesta el teléfono! (se mantiene un tono de intriga alto hasta que el jugador realmente interactua con el teléfono.) 
+oh perdon, seguro estas pensando que esta ocurriendo, soy Rodrigo Seguel la persona que esta trabajando en el juego que estas jugando.
 
-Ahhhhhh, jugador? que haces aquí?, deberías estar en otro juego mientras este se termina, no aquí hablando conmigo, estas loco? sabes lo que hara el programador cuando se entere de que estoy interactuando contigo antes de tiempo?.
-
-Ah mierda, ni siquiera esta terminado el juego!!!, AHHHHH.
-
-Bueno, quizá deberé hacerte un apoyo antes de tiempo.
-
-**(una puerta se abre tras el teléfono)** bueno, sal por esa puerta si eres tan amable, así saldrás del juego y podrás hacer otras cosas mientras el juego se termina. (si el jugador sale de la habitación por la puerta el juego se cerrara).
-
-La puerta te espera!
-
-No crees que el otro lado de esa puerta se ve un poco... Sexy (decir con voz sensual).
-
-Bueno, veo que tu gusto por las puertas no es tan fuerte como el mio, si me perdonas la puerta sera para mi (la puerta se cierra)
-
-Bueno, seamos un poco mas técnicos (se escucha un foco prenderse) ahí puedes ver un interruptor, este apagara el juego al ser presionado y te va a permitir ir a hacer otras cosas mientras tanto.
-
-No es por culpar al programador, pero no has notado que no existe un botón de salir aun?.
-
-Ve y tira de la palanca.
-
-Vamos!!!!.
-
-Bueno si no quieres hacerlo tendré que ponerme diplomático.
-
-O jalas de esa palanca!!! o te asustare!!!!.
-
-Wow, bueno, me veo en obligación de hacerlo, aquí va. (la música se para, inicia una música tensa y tras unos segundos aparece un gatito en un png)
-
-ven, puedes acariciar el gatito (si acaricias el gatito con tensión este solo va a maullar)
-
-oh que raro, nada ha ocurrido, bueno aun puedes venir y presionar la palanca (el jugador al darse vuelta recibe un screamer (ideal que sea ligero y algo muy tonto))
-
-hahahahahahahaah, sabia que lo lograría, caíste en el truco mas viejo en el libro.
-
-bueno, te dejare pasar pero trata de no contarle al programador de que estas aqui, si lo ves dile que el diseñador te dejo continuar ok?, bueno usa esta puerta para despertar (se abre una puerta, si la pasas todo se pone en negro y salta un screamer con el gatito) Hehehehehe, nunca falla (el jugador se despierta).
+pero antes de seguir hablando, salta conmigo. (se abre un espacio en la plataforma qeu permite al jugador lanzarse y asi pasar al siguiente nivel).
 
 ---
 
-Project_Al0n3 acto 2
+Project_Al0n3 acto 3
+
+El juego en si no esta terminado y ahora tienes 2 opciones:
+
+1. accionas esta palanca y apagas el juego, terminas todo y recuerda que este juego no se terminara.
+2. vienes por esta puerta y te hablare de lo que me hizo crear esta obra.
+
+te prometo que si has venido por una experiencia de terror la tendras, por eso he dejado una tercera puerta, para que pienses sobre que eleccion tomar.
+
+y durante ese mismo tiempo, puedas tener la "experiencia que buscabas".
+
