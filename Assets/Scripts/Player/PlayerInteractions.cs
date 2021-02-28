@@ -5,6 +5,10 @@ using TMPro;
 
 public class PlayerInteractions : MonoBehaviour
 {
+    public int counter;
+    public GameObject light;
+    public AudioSource phoneRing;
+    public AudioSource audio;
     static public bool lightState;
 
     //estados de pausa
@@ -42,6 +46,7 @@ public class PlayerInteractions : MonoBehaviour
     static public RaycastHit openDoorRc;
     static public RaycastHit whiteDoorRc;
     static public RaycastHit bedRc;
+    static public RaycastHit phoneRc;
 
     //switch 1
     public LayerMask lightSwitch;
@@ -110,6 +115,10 @@ public class PlayerInteractions : MonoBehaviour
     static public bool touchTheBed;
     static public bool sleeping;
 
+    public LayerMask cellPhone2;
+    static public bool itsTouchingTheCellPhone;
+    static public bool touchTheCellPhone;
+
     void Start()
     { 
         sleeping = false;
@@ -152,6 +161,8 @@ public class PlayerInteractions : MonoBehaviour
 
         itsTouchingTheBed = Physics.CheckSphere(obectPlayerRadio.position, 1f, bed);
 
+        itsTouchingTheCellPhone = Physics.CheckSphere(obectPlayerRadio.position, 1f, cellPhone2);
+
         touchTheSwitch = Physics.Raycast(this.transform.position, this.transform.forward, out switchLight, viewDistance,lightSwitch);  
         touchTheSwitch2 = Physics.Raycast(this.transform.position, this.transform.forward, out switchLight, viewDistance,lightSwitch2);  
 
@@ -167,7 +178,9 @@ public class PlayerInteractions : MonoBehaviour
         touchTheBlockedDoor = Physics.Raycast(this.transform.position, this.transform.forward, out blockedDoorRc, 2, blockedDoor);  
         touchTheOpenDoor = Physics.Raycast(this.transform.position, this.transform.forward, out openDoorRc, 2, openDoor); 
 
-        touchTheBed = Physics.Raycast(this.transform.position, this.transform.forward, out bedRc, 2, bed);  
+        touchTheBed = Physics.Raycast(this.transform.position, this.transform.forward, out bedRc, 2, bed); 
+
+        touchTheCellPhone = Physics.Raycast(this.transform.position, this.transform.forward, out phoneRc, 2, cellPhone2);  
         
         //iteractuables
         
@@ -262,6 +275,21 @@ public class PlayerInteractions : MonoBehaviour
         if(touchThePhone == true && itsTouchingThePhone == true)
         {
             isTurnedOff.color = new Color32(255,255,255,255);
+        }
+        if(touchTheCellPhone == true && itsTouchingTheCellPhone == true)
+        {
+            interact.color = new Color32(255,255,255,255);
+            if (Input.GetButtonDown("Action"))
+            {
+                counter = 1;
+                if (counter == 1) 
+                {
+                    audio.Play();
+                    counter++;
+                }
+                phoneRing.Pause();
+                light.SetActive(true);
+            }
         }
         else if(touchTheSwitch == true && itsTouchingTheSwitch == true)
         {
