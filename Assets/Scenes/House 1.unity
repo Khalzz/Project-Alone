@@ -21,8 +21,8 @@ RenderSettings:
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
-  m_AmbientEquatorColor: {r: 0.003921569, g: 0.003921569, b: 0.003921569, a: 1}
-  m_AmbientGroundColor: {r: 0.00007659314, g: 0.00006127451, b: 0.00006127451, a: 1}
+  m_AmbientEquatorColor: {r: 0.000015318628, g: 0.000015318628, b: 0.000015318628, a: 1}
+  m_AmbientGroundColor: {r: 0.0007314645, g: 0.0005859375, b: 0.0005859375, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
@@ -11409,6 +11409,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9140d4c851d7fe1a8ee215d2d689e01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  counter: 0
+  light: {fileID: 0}
+  phoneRing: {fileID: 0}
+  audio: {fileID: 0}
   pointOfView: {fileID: 314546060}
   phoneMenu: {fileID: 246925374}
   eye: {fileID: 1246014084}
@@ -11462,6 +11466,9 @@ MonoBehaviour:
   bed:
     serializedVersion: 2
     m_Bits: 8388608
+  cellPhone2:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!43 &1194227941
 Mesh:
   m_ObjectHideFlags: 0
@@ -16781,7 +16788,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.9056604, g: 0.80666184, b: 0.5553578, a: 1}
   m_Intensity: 0.94
-  m_Range: 6.36
+  m_Range: 8.229929
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
