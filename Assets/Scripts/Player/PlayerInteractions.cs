@@ -143,7 +143,6 @@ public class PlayerInteractions : MonoBehaviour
         
         //iteractuables
         
-        
          if (touchTheClosedDoor == true && itsTouchingTheClosedDoor == true) 
         {
             closedDoorText.color = new Color32(255,255,255,255);
