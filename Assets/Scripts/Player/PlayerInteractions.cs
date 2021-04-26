@@ -144,12 +144,31 @@ public class PlayerInteractions : MonoBehaviour
         //iteractuables
         
         
-
          if (touchTheClosedDoor == true && itsTouchingTheClosedDoor == true) 
         {
             closedDoorText.color = new Color32(255,255,255,255);
             blockedDoorText.color = new Color32(255,255,255,0);
             interact.color = new Color32(255,255,255,0);
+        }
+        else if (touchTheBlockedDoor == true && itsTouchingTheBlockedDoor == true) 
+        {
+            closedDoorText.color = new Color32(255,255,255,0);
+            blockedDoorText.color = new Color32(255,255,255,255);
+            interact.color = new Color32(255,255,255,0); 
+        }
+        else if (touchTheOpenDoor == true && itsTouchingTheOpenDoor == true) 
+        {
+            closedDoorText.color = new Color32(255,255,255,0);
+            blockedDoorText.color = new Color32(255,255,255,0);
+            interact.color = new Color32(255,255,255,255);
+            if (Input.GetButtonDown("Action") && theDoorIsOpen == false)
+            {
+                doorState = 1; //open the door
+            }
+            if (Input.GetButtonDown("Action") && theDoorIsOpen == true)
+            {
+                doorState = 2; //close the door
+            }
         }
         else
         {
